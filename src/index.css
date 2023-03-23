@@ -1,4 +1,13 @@
 /* stylelint-disable selector-list-comma-newline-after */
+.social-icons a:not(:last-child) {
+  margin-right: 25px;
+}
+
+.social-icons i {
+  font-size: 23px;
+  color: #000;
+}
+
 
 .blog-header {
     line-height: 1;
