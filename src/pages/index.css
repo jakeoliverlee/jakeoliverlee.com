@@ -1,3 +1,22 @@
+/* Grow */
+.hvr-grow {
+  display: inline-block;
+  vertical-align: middle;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+  transform: scale(1.1);
+}
+
+
 /* stylelint-disable selector-list-comma-newline-after */
 .social-icons a:not(:last-child) {
   margin-right: 25px;
@@ -7,6 +26,26 @@
   font-size: 23px;
   color: #000;
 }
+
+#dark_mode_icon{
+    width: 25px;
+    cursor: pointer;
+    margin-right: 17px;
+}
+
+#dark_mode_icon:hover {
+  animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 
 
 .blog-header {
