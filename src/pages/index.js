@@ -1,5 +1,4 @@
-var audio = new Audio("sounds/dark_light.wav");
-const darkModeIcon = document.querySelector('#dark_mode_icon');
-darkModeIcon.addEventListener('click', () => {
-    audio.play();
-  });
+const audio = new Audio("sounds/dark_light.wav");
+$('#dark_mode_icon').on('click', () => {
+  audio.play();
+});
