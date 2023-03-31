@@ -1,15 +1,23 @@
 {
-  "name": "express_test",
-  "version": "1.0.0",
-  "description": "",
+  "name": "expressjs",
+  "version": "0.0.1",
+  "description": "Backend for Jake's resume website",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jakeoliverlee/resume.git"
+  },
   "author": "Jake Lee",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jakeoliverlee/resume/issues"
+  },
+  "homepage": "https://github.com/jakeoliverlee/resume#readme",
   "dependencies": {
-    "body-parser": "^1.20.2",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "nodemon": "^2.0.22"
   }
 }

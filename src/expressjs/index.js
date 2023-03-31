@@ -3,15 +3,19 @@ const bodyParser = require("body-parser");
 
 const app = express();
 
+app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get("/resume", function(request, response){
-    response.send("<h1>Resume</h1>");
+app.use(express.static(__dirname + "/pages/home"));
+app.use(express.static(__dirname + "/pages/contact"));
+
+app.get("/contact", function(request, response){
+    response.sendFile(__dirname + "/pages/contact/contact.html");
 });
 
 app.get("/", function(request, response){
-    response.sendFile(__dirname + "/../index.html");
+    response.sendFile(__dirname + "/pages/home/index.html");
 });
 
 app.listen(3000, function(){
     console.log("Server started on :3000")
-});  // listen on port 3000
+});
