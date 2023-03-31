@@ -27,14 +27,98 @@
   color: #000;
 }
 
+.social-icons a i {
+  opacity: 0;
+  animation: fadein 1s ease-in-out forwards;
+  transform-origin: center center;
+  transform-box: fill-box;
+  transform-style: preserve-3d;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.social-icons a:nth-child(1) i {
+  animation-delay: 0.1s;
+}
+
+.social-icons a:nth-child(2) i {
+  animation-delay: 0.2s;
+}
+
+.social-icons a:nth-child(3) i {
+  animation-delay: 0.3s;
+}
+
 .social-icons a:hover i {
   transform: scale(1.2);
 }
 
+
+.social-icons {
+  display: flex;
+  align-items: center;
+}
+
+.social-icons a:not(:last-child) {
+  margin-right: 25px;
+}
+
+.social-icons i {
+  font-size: 23px;
+  color: #000;
+}
+
+.social-icons a i {
+  opacity: 0;
+  animation: fadein 1s ease-in-out forwards;
+  transform-origin: center center;
+  transform-box: fill-box;
+  transform-style: preserve-3d;
+}
+
 #dark_mode_icon{
-    width: 25px;
-    cursor: pointer;
-    margin-right: 17px;
+  width: 25px;
+  cursor: pointer;
+  margin-right: 17px;
+  opacity: 0;
+  animation: fadein 1s ease-in-out forwards;
+  animation-delay: 0.5s; /* Delay the animation for 0.5 seconds */
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.social-icons a:nth-child(1) i {
+  animation-delay: 0.1s;
+}
+
+.social-icons a:nth-child(2) i {
+  animation-delay: 0.2s;
+}
+
+.social-icons a:nth-child(3) i {
+  animation-delay: 0.3s;
+}
+
+.social-icons a:hover i {
+  transform: scale(1.2);
 }
 
 #dark_mode_icon:hover {
@@ -49,6 +133,7 @@
     transform: rotate(360deg);
   }
 }
+
 
 
 
