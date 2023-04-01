@@ -11,3 +11,7 @@ const visitorScheme = new schema({
     }
 });
 
+const visits = mongoose.model('visits', visitorScheme);
+// [ { _id: ObjectId("6427ea5b545916585d0a318d"), count: 0 } ]
+
+module.exports = visits;
