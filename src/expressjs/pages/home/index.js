@@ -16,3 +16,26 @@ function updateCounter() {
 }
 
 sessionStorage.setItem("visit", "x");
+
+
+function setActiveLink() {
+  const currentPage = window.location.pathname; // Get the current page path
+  const links = document.querySelectorAll('.nav a'); // Get all the links in the navbar
+
+  // Loop through the links and remove the active class from all of them
+  links.forEach(link => {
+    link.classList.remove('text-primary');
+  });
+
+  // Add the active class to the appropriate link based on the current page
+  if (currentPage === '/index.html#') {
+    document.getElementById('work-experience-link').classList.add('text-primary');
+  } else if (currentPage === '/projects') {
+    document.getElementById('projects-link').classList.add('text-primary');
+  } else if (currentPage === '/recognition') {
+    document.getElementById('recognition-link').classList.add('text-primary');
+  }
+}
+
+// Call the setActiveLink function when the page loads
+window.onload = setActiveLink;
