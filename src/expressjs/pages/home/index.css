@@ -1,4 +1,11 @@
 
+.social-icons {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+
+
 /* stylelint-disable selector-list-comma-newline-after */
 .social-icons a:not(:last-child) {
   margin-right: 25px;
@@ -9,17 +16,14 @@
   color: #000;
 }
 
+.nav a:hover {
+  transform: scale(1.1);
+}
+
 
 .social-icons a:hover i {
-  transform: scale(1.2);
+  transform: scale(1.05);
 }
-
-.social-icons {
-  display: flex;
-  align-items: center;
-  margin-right: 5000px;
-}
-
 
 .social-icons i {
   font-size: 23px;
