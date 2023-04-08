@@ -1,3 +1,9 @@
+@media (max-width: 640px) {
+  .flex {
+    flex-direction: column;
+  }
+}
+
 
 .material-symbols-outlined {
   font-variation-settings:
