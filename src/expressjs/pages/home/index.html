@@ -85,7 +85,7 @@
 
       <hr class="opacity-5 m-2">
       <div class="flex">
-        <div class="space-y-4 my-4 m-2 mt-4 w-1/2 rounded-2xl border p-6 shadow-md">
+        <div class="space-y-4 my-4 m-2 mt-4 w-full md:w-1/2 rounded-2xl border p-6 shadow-md" style="overflow:auto;">
           <div class="space-y-4">
             <span class="block ml-2">
               <div class="flex items-center justify-between">
@@ -98,6 +98,7 @@
             </div>
           </span>
           <span class="block ml-4">
+            <div class="group hover:bg-gray-50 group-hover:scale-100 hover:border-transparent rounded-md p-2">
             <div class="flex space-x-2 items-center">
               <img class="w-10 h-10 rounded-full shadow-md border border-white p-1" src="assets/svgs/aws-svgrepo-com (1).svg" alt="AWS Icon">
               <span class="text-md font-medium">Amazon Web Services</span>
@@ -105,27 +106,11 @@
             <p class="ml-10 mt-2 text-sm text-gray-600">
               <strong>DCO Team Lead</strong>, <em><span style="opacity: 0.7;" class="ml-1">01/2023-present</em></span>
             </p>
-            <p class="ml-14 mt-2 text-sm text-gray-600 italic">
-              Description of position 1 at Company 1:
-              <ul class="list-disc ml-16 mt-2">
-                <li class="text-xs text-gray-500">Bullet point 1</li>
-                <li class="text-xs text-gray-500">Bullet point 2</li>
-                <li class="text-xs text-gray-500">Bullet point 3</li>
-              </ul>
-            </p>
             <p class="ml-10 mt-4 text-sm text-gray-600">
               Datacentre Operations II, <em><span style="opacity: 0.7;">12/2022 - present</em></span>
               <span class="ml-2">
                 <i class="fas fa-arrow-up text-blue-500"></i>
               </span>
-            </p>
-            <p class="ml-14 mt-2 text-sm text-gray-600 italic">
-              Description of position 1 at Company 1:
-              <ul class="list-disc ml-16 mt-2">
-                <li class="text-xs text-gray-500">Bullet point 1</li>
-                <li class="text-xs text-gray-500">Bullet point 2</li>
-                <li class="text-xs text-gray-500">Bullet point 3</li>
-              </ul>
             </p>
             <p class="ml-10 mt-4 text-sm text-gray-600">
               Datacentre Operations Tech I, <em><span style="opacity: 0.7;">11/2020 - 12/2022 · 2 yrs 1 mo</em></span>
@@ -133,17 +118,10 @@
                 <i class="fas fa-arrow-up text-blue-500"></i>
               </span>
             </p>
-            <p class="ml-14 mt-2 text-sm text-gray-600 italic">
-              Description of position 1 at Company 1:
-              <ul class="list-disc ml-16 mt-2">
-                <li class="text-xs text-gray-500">Bullet point 1</li>
-                <li class="text-xs text-gray-500">Bullet point 2</li>
-                <li class="text-xs text-gray-500">Bullet point 3</li>
-              </ul>
-            </p>
-            </ul>
+            </div>
           </span>
           <span class="block ml-4">
+            <div class="group hover:bg-white hover:shadow-md hover:border-transparent rounded-md p-2">
             <div class="flex space-x-2 items-center">
               <img class="w-10 h-10 rounded-full shadow-md border border-white p-1" src="assets/svgs/QQ.L.svg" alt="QinetiQ icon">
               <span class="text-md font-medium">QinetiQ</span>
@@ -162,11 +140,12 @@
                 </span>
               </li>
             </ul>
-          </span>   
+            </div>
+          </span>
         </li>
       </ul>
       <div class="flex items-center justify-center mt-14">
-        <a href="assets/cv.pdf" class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-md">
+        <a href="assets/cv.pdf" class="bg-zinc-50 hover:bg-zinc-100 text-black font-medium py-2 px-4 rounded-md text-sm">
           Download CV
         </a>
       </div>
@@ -174,35 +153,68 @@
   </div>
   </div>
 
-        <div class="flex flex-wrap">
-          <!-- Technical Skills Section -->
-          <div class="w-full ml-4">
-            <div class="space-y-4 my-4 m-2 mt-4 w-full rounded-2xl border p-6 shadow-md">
-              <div class="space-y-4">
-                <span class="block ml-2">
-                  <div class="space-x-4 flex items-center">
-                    <span class="material-symbols-outlined my-2">
-                      code
-                    </span>
-                    <span class="text-lg font-medium">Technical Skills</span>
-                  </div>
-                </span>
-                <span class="block ml-4">
-                  <ul class="list-disc ml-8 mt-2">
-                    <li class="text-sm text-gray-600">Skill 1</li>
-                    <li class="text-sm text-gray-600">Skill 2</li>
-                    <li class="text-sm text-gray-600">Skill 3</li>
-
-                  </ul>
-                </span>
-              </div>
+  <div class="flex flex-wrap">
+    <!-- Technical Skills Section -->
+    <div class="w-full ml-4 mx-2">
+      <div class="space-y-4 my-4 m-2 mt-4 w-full rounded-2xl border p-6 shadow-md">
+        <div class="space-y-4">
+          <span class="block ml-2">
+            <div class="space-x-4 flex items-center">
+              <span class="material-symbols-outlined my-2">
+                code
+              </span>
+              <span class="text-lg font-medium">Technical Skills</span>
             </div>
-          </div>
+          </span>
+          <span class="block ml-4">
+            <ul class="list-disc ml-8 mt-2">
+              <li class="text-sm text-gray-600">Skill 1</li>
+              <li class="text-sm text-gray-600">Skill 2</li>
+              <li class="text-sm text-gray-600">Skill 3</li>
+            </ul>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Certifications Section -->
+    <div class="w-full ml-4 mx-2">
+      <div class="space-y-4 my-4 m-2 mt-4 w-full rounded-2xl border p-6 shadow-md">
+        <div class="space-y-4 mx-2">
+          <span class="block ml-2">
+            <div class="flex space-x-4 items-center">
+              <span class="material-symbols-outlined my-2">
+                school
+              </span>
+              <span class="text-lg font-medium">Certifications</span>
+            </div>
+          </span>
+          <span class="block ml-4">
+            <div class="flex space-x-2 items-center">
+              <img class="w-10 h-10 rounded-full shadow-md border border-white p-1" src="assets/svgs/certification-icon.svg" alt="Certification Icon">
+              <span class="text-md font-medium">Certification Name</span>
+            </div>
+            <p class="ml-10 mt-2 text-sm text-gray-600">
+              <strong>Certifying Body</strong>, <em><span style="opacity: 0.7;" class="ml-1">Date Obtained</em></span>
+            </p>
+            <p class="ml-14 mt-2 text-sm text-gray-600 italic">
+              Description of certification:
+              <ul class="list-disc ml-16 mt-2">
+                <li class="text-xs text-gray-500">Bullet point 1</li>
+                <li class="text-xs text-gray-500">Bullet point 2</li>
+                <li class="text-xs text-gray-500">Bullet point 3</li>
+              </ul>
+            </p>
+          </span>
+        </div>
+      </div>
+    </div>
+
 
           <!-- Education Section -->
-          <div class="w-full ml-4">
+          <div class="w-full ml-4 mx-2">
             <div class="space-y-4 my-4 m-2 mt-4 w-full rounded-2xl border p-6 shadow-md">
-              <div class="space-y-4">
+              <div class="space-y-4 mx-2">
                 <span class="block ml-2">
                   <div class="space-x-4 flex items-center">
                     <span class="material-symbols-outlined my-2">

@@ -4,6 +4,24 @@
   }
 }
 
+.flex-container {
+  /* Set height and max-height for the container */
+  height: 400px; /* desired height */
+  max-height: 400px; /* desired max height */
+  overflow-y: auto; /* enable vertical scrolling */
+}
+
+.flex-item {
+  /* Set height for the item */
+  height: 1000px; /* desired height to make the content longer */
+  /* Add any other styles for your item */
+}
+
+/* Add hover effect to the container */
+.flex-container:hover {
+  overflow-y: scroll; /* enable scrolling only on hover */
+}
+
 
 .material-symbols-outlined {
   font-variation-settings:
