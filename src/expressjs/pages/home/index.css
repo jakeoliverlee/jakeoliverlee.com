@@ -4,24 +4,6 @@
   }
 }
 
-.flex-container {
-  /* Set height and max-height for the container */
-  height: 400px; /* desired height */
-  max-height: 400px; /* desired max height */
-  overflow-y: auto; /* enable vertical scrolling */
-}
-
-.flex-item {
-  /* Set height for the item */
-  height: 1000px; /* desired height to make the content longer */
-  /* Add any other styles for your item */
-}
-
-/* Add hover effect to the container */
-.flex-container:hover {
-  overflow-y: scroll; /* enable scrolling only on hover */
-}
-
 
 .material-symbols-outlined {
   font-variation-settings:
@@ -67,7 +49,7 @@
   color: #000;
 }
 
-#dark_mode_icon{
+#toggleDarkModeButton{
   width: 25px;
   cursor: pointer;
   margin-right: 17px;
@@ -108,19 +90,7 @@
     overflow-y: hidden;
   }
 
-  .nav-scroller .nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    padding-bottom: 1rem;
-    margin-top: -1px;
-    overflow-x: auto;
-    text-align: center;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-  }
+
 
   .nav-scroller .nav-link {
     padding-top: .75rem;

@@ -1,5 +1,5 @@
 const audio = new Audio("sounds/dark_light.wav");
-$('#dark_mode_icon').on('click', () => {
+$('#toggleDarkModeButton').on('click', () => {
   audio.play();
 });
 
@@ -36,6 +36,15 @@ function setActiveLink() {
     document.getElementById('recognition-link').classList.add('text-primary');
   }
 }
+
+const toggleDarkModeButton = document.getElementById('toggleDarkModeButton');
+
+// Add a click event listener to the button
+toggleDarkModeButton.addEventListener('click', () => {
+  // Toggle the dark class on the body element
+  document.body.classList.toggle('dark');
+});
+
 
 // Call the setActiveLink function when the page loads
 window.onload = setActiveLink;
