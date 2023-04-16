@@ -1,5 +1,5 @@
 const audio = new Audio("sounds/dark_light.wav");
-$('#theme-toggle').on('click', () => {
+$('#dark_mode_icon').on('click', () => {
   audio.play();
 });
 
@@ -33,15 +33,14 @@ themeToggleBtn.addEventListener('click', function() {
             localStorage.setItem('color-theme', 'light');
         }
 
-    // if NOT set via local storage previously
-    } else {
-        if (document.documentElement.classList.contains('dark')) {
-            document.documentElement.classList.remove('dark');
-            localStorage.setItem('color-theme', 'light');
-        } else {
-            document.documentElement.classList.add('dark');
-            localStorage.setItem('color-theme', 'dark');
-        }
-    }
+  // Add the active class to the appropriate link based on the current page
+  if (currentPage === '/index.html#') {
+    document.getElementById('work-experience-link').classList.add('text-primary');
+  } else if (currentPage === '/projects') {
+    document.getElementById('projects-link').classList.add('text-primary');
+  } else if (currentPage === '/recognition') {
+    document.getElementById('recognition-link').classList.add('text-primary');
+  }
+}
 
 });
