@@ -10,42 +10,59 @@
     <title>Jake Lee | Resume</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <!-- Icons for socials -->
     <script src="https://kit.fontawesome.com/85539b08a7.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Custom styles for this template -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-    <link href="index.css" rel="stylesheet">
+    <link href="output.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script>
+      // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+      if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+      } else {
+          document.documentElement.classList.remove('dark')
+      }
+  </script>
   </head>
 
-  <body class="flex flex-col items-center bg-slate-100">
-    <div id="main" class="container mx-auto bg-white m-2 px-6 rounded-lg dark:bg-slate-900">
+  <body class="flex flex-col items-center bg-slate-100 dark:bg-black dark:text-white">
+    <div id="main" class="container mx-auto bg-white dark:bg-zinc-900 m-2 px-6 rounded-lg">
       <header class="blog-header py-3">
         <div class="flex items-center justify-between">
           <div class="w-1/4">
             <div class="social-icons">
-              <a href="https://github.com/jakeoliverlee"><i class="fab fa-github"></i></a>
-              <a href="https://gitlab.com/jakeoliverlee"><i class="fab fa-gitlab"></i></a>
-              <a href="https://www.linkedin.com/in/jake-lee-4aa088129/"><i class="fab fa-linkedin"></i></a>
+              <a href="https://github.com/jakeoliverlee">
+              <img src="assets/images/icons8-github-94.png" alt="github" class="h-7 w-7">
+              </a>
+              <a href="https://www.linkedin.com/in/jake-lee-4aa088129/">
+              <img src="assets/svgs/linkedin.svg" alt="linkedin" class="h-7 w-7">
+              </a>
+              <a href="https://gitlab.com/jakeoliverlee">
+                <img src="assets/svgs/gitlab.svg" alt="gitlab" class="h-7 w-7">
+              </a>
             </div>
           </div>
           <div class="w-1/4 text-center">
             <a class="blog-header-logo text-dark" href="#">Jake Lee</a>
           </div>
           <div class="w-1/4 flex justify-end items-center">
-            <img src="assets/images/dark theme icon/moon.png" id="dark_mode_icon" class="hover:shadow-2xl hover:shadow-blue-500/50">
-            <a class="font-sans inline-block px-3 py-1 text-sm font-semibold text-gray-700 border border-gray-400 rounded hover:bg-blue-200 hover:opacity-40 ml-6 transition duration-750 shadow-md" href="mailto:jakeoliverlee@gmail.com">Contact me</a>
+            <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-1 mr-4">
+              <svg id="theme-toggle-dark-icon" class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+              <svg id="theme-toggle-light-icon" class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+          </button>
+          <a type="button" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-xs px-4 py-2 mr-2  dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" href="mailto:jakeoliverlee@gmail.com">Contact Me</a>
           </div>
         </div>
       </header>
     </div>
 
-    <div class="py-1 nav-scroller mb-2 mt-1 ml-5 justify-start text-left rounded-full bg-white/90 shadow-md text-sm font-medium">
+    <div class="py-1 nav-scroller mb-2 mt-1 ml-5 justify-start text-left rounded-full bg-white/90 dark:bg-zinc-900 ring-1 dark:ring-zinc-300/20  text-sm font-medium">
       <nav class="px-3 nav d-flex justify-between">
         <div class="flex-1">
           <a id="work-experience-link" class="font-sans block px-3 py-2 text-muted" href="#">Projects</a>
@@ -59,12 +76,12 @@
       </nav>
     </div>
 
-    <div class="container mx-auto h-full bg-white m-2 px-8 rounded-lg">
+    <div class="container mx-auto h-full bg-white dark:bg-zinc-900 m-2 px-8 rounded-lg">
       <div id="about-me" class="mt-7 ml-4 p-3">
         <div class="flex flex-wrap md:flex-no-wrap">
           <div class="flex-1">
             <h1 class="text-4xl font-bold">A little...about...me!</h1>
-            <p class="mt-6 text-base text-zinc-600 dark:text-zinc-400 max-w-4xl">
+            <p class="mt-6 text-base text-zinc-600 dark:text-zinc-400 max-w-4xl sm:mb-4">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Pellentesque Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Pellentesque Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -76,254 +93,124 @@
             </p>
           </div>
           <div class="flex-none mt-4 md:mt-0 ml-16 mb-4">
-            <img src="assets/images/about.jpg" class="w-44 h-44 mr-24 my-2 mb-16 rounded-full p-1 shadow-md border border-white" alt="about_me">
+            <img class="m-6 mr-10 w-36 h-36 p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500" src="assets/images/about.jpg" alt="Bordered avatar">
           </div>
         </div>
+        <hr class="opacity-25 my-6">
+        <div class="grid grid-cols-2 gap-8">
+        <div class="flex space-x-4 items-center mb-2">
+          <span class="material-symbols-outlined my-2">
+            work
+          </span>
+          <span class="text-lg font-medium dark:text-white">Work Experience</span>
+        </div>
+        <div class="flex items-center mb-2">
+        </div>
+
+        <div class="flex flex-row justify-items-center">
+          <ol class="max-w-1/2 relative border-l border-gray-200 dark:border-gray-700 ml-4">
+            <li class="mb-10 ml-4">
+                <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                <div class="flex flex-wrap">
+                  <img id="dark_mode_aws" class="w-10 h-10 my-2 mb-2 rounded-full shadow-md border border-white p-1" src="assets/svgs/dark_aws.svg" alt="Dark mode AWS Icon">
+                  <div class="text-sm flex items-center ml-3 mt-1 mb-2">Amazon Web Services</div>
+                </div>
+                <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Jan 2023 - present</time>
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">DCO Shift Team Lead</h3>
+                <p class="mb-4 text-xs font-normal text-gray-500 dark:text-gray-400">Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.</p>
+            </li>
+            <li class="mb-10 ml-4">
+              <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+              <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Dec 2022 - Jan 2023 · 1 mo
+                <span class="ml-2">
+                  <i class="fas fa-arrow-up text-blue-500"></i>
+                </span>
+              </time>
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Datacentre Operations Tech II</h3>
+              <p class="mb-4 text-xs font-normal text-gray-500 dark:text-gray-400">Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.</p>
+            </li>
+            <li class="mb-10 ml-4">
+              <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+              <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Nov 2020 - Nov 2022 · 2 yrs 1 mo
+                <span class="ml-2">
+                  <i class="fas fa-arrow-up text-blue-500"></i>
+                </span>
+              </time>
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Datacentre Operations Tech I</h3>
+              <p class="mb-4 text-xs font-normal text-gray-500 dark:text-gray-400">Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.</p>
+            </li>
+            <li class="mb-10 ml-4">
+                <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                <div class="flex flex-wrap">
+                  <img id="qq logo" class="w-10 h-10 my-2 mb-4 rounded-full shadow-md border border-white p-1" src="assets/svgs/QQ.L.svg" alt="qq logo">
+                  <div class="text-sm flex items-center ml-3 mt-1 mb-4">QinetiQ</div>
+                </div>
+                <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Aug 2019 - Nov 2020 · 1 yr 4 mos</time>
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Shift Service Desk Agent</h3>
+                <p class="text-xs font-normal text-gray-500 dark:text-gray-400">All of the pages and components are first designed in Figma and we keep a parity between the two versions even as we update the project.</p>
+            </li>
+            <li class="ml-4">
+                <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">April 2022</time>
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">E-Commerce UI code in Tailwind CSS</h3>
+                <p class="text-xs font-normal text-gray-500 dark:text-gray-400">Get started with dozens of web components and interactive elements built on top of Tailwind CSS.</p>
+                <p class="mb-4 text-xs font-normal text-gray-500 dark:text-gray-400">Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.</p>
+                <a href="assets/cv.pdf" class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700">Download CV<svg class="w-3 h-3 ml-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></a>
+            </li>
+          </ol>
       </div>
-
-
-
-      <hr class="opacity-5 m-2">
-      <div class="flex h-auto justify-around">
-        <div class="max-h-full space-y-4 my-4 m-2 mt-4 w-full md:w-1/2 rounded-2xl border p-6 shadow-md" id="work experience div">
-          <div class="space-y-4 max-h-12">
-            <span class="block ml-2">
-              <div class="flex items-center justify-between">
-                <div class="flex space-x-4 items-center">
-                  <span class="material-symbols-outlined my-2">
-                    work
-                  </span>
-                  <span class="text-lg font-medium">Work Experience</span>
-                </div>
-              </div>
+      <div class="grid grid-rows-3 xs:grid-rows-1">
+      <div class="space-y-12 lg:pl-16 xl:pl-24">
+        <a id="technical skills" href="#" class="ml-4  block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+          <div class="flex space-x-4 items-center mb-2">
+            <span class="material-symbols-outlined my-2">
+              build
             </span>
-            <span class="block ml-4">
-              <div class="group hover:bg-gray-50 group-hover:scale-100 hover:border-transparent rounded-md p-2 cursor-pointer">
-                <div class="flex space-x-2 items-center">
-                  <img class="w-10 h-10 rounded-full shadow-md border border-white p-1" src="assets/svgs/aws-svgrepo-com (1).svg" alt="AWS Icon">
-                  <span class="text-md font-medium">Amazon Web Services</span>
-                </div>
-                <p class="ml-10 mt-2 text-sm text-gray-600">
-                  <strong>DCO Team Lead</strong>, <em><span style="opacity: 0.7;" class="ml-1">01/2023-present</em></span>
-                </p>
-                <p class="ml-10 mt-4 text-sm text-gray-600">
-                  Datacentre Operations II, <em><span style="opacity: 0.7;">12/2022 - present</em></span>
-                  <span class="ml-2">
-                    <i class="fas fa-arrow-up text-blue-500"></i>
-                  </span>
-                </p>
-                <p class="ml-10 mt-4 text-sm text-gray-600">
-                  Datacentre Operations Tech I, <em><span style="opacity: 0.7;">11/2020 - 12/2022 · 2 yrs 1 mo</em></span>
-                  <span class="ml-2">
-                    <i class="fas fa-arrow-up text-blue-500"></i>
-                  </span>
-                </p>
-              </div>
-            </span>
-            <span class="block ml-4">
-              <div class="group hover:bg-gray-50 group-hover:scale-100 hover:border-transparent rounded-md p-2 cursor-pointer">
-                <div class="flex space-x-2 items-center">
-                  <img class="w-10 h-10 rounded-full shadow-md border border-white p-1" src="assets/svgs/QQ.L.svg" alt="QinetiQ icon">
-                  <span class="text-md font-medium">QinetiQ</span>
-                </div>
-                <p class="ml-10 mt-2 text-sm text-gray-600">
-                  Position 2, <em>Date 2</em>
-                </p>
-                <p class="ml-14 mt-2 text-sm text-gray-600 italic">
-                  Description of position 2 at Company 2
-                </p>
-                <ul class="list-disc ml-10 mt-2">
-                  <li class="text-xs text-gray-500">
-                    Previous Position, <em>Date</em>
-                    <span class="ml-2">
-                    <i class="fas fa-arrow-up text-blue-500"></i>
-                </span>
-              </li>
-            </ul>
+            <span class="text-lg font-medium dark:text-white">Proficient in:</span>
           </div>
-            <hr class="opacity-5 m-2 mt-4">
-            <span class="block  mt-4">
-              <div class="flex items-center justify-between">
-                <div class="flex space-x-4 items-center">
-                  <span class="material-symbols-outlined my-4">
-                    group
-                  </span>
-                  <span class="text-lg font-medium">Other Experience</span>
-                </div>
-            </div>
-          </span>
-          <span class="block ml-4">
-              <div class="flex space-x-2 items-center">
-                <img class="w-10 h-10 rounded-full shadow-md border border-white p-1" src="assets/svgs/cisco.svg" alt="cisco icon">
-                <span class="text-md font-medium">Cisco</span>
-              </div>
-              <p class="ml-10 mt-2 text-sm text-gray-600">
-                <span class="font-medium">Team Building Programme</span>, <em><span style="opacity: 0.7;" class="ml-1">07/2017 - 09/2017 · 3 mo</span></em>
-              </p>
-              <p class="ml-14 mt-2 text-sm text-gray-600 italic">
-                Team building program learning about fundamentals of Networking, IoT and Security.
-              </p>
-          </span>
-            <div class="flex items-center justify-center mt-auto">
-              <a href="assets/cv.pdf" class="bg-zinc-50 hover:bg-zinc-100 text-black font-medium py-2 px-4 mt-4 rounded-md text-sm">
-                Download CV
-              </a>
-          </span>
-        </div>
-        </div>
-        </div>
-
-
-
-
-        <div class="flex">
-          <!-- Technical Skills Section -->
-          <div class="w-full ml-4 mx-2">
-            <div class="space-y-4 my-4 m-2 mt-4 w-full rounded-2xl border p-6 shadow-md">
-              <div class="space-y-4">
-                <span class="block ml-2">
-                  <div class="space-x-4 flex items-center">
-                    <span class="material-symbols-outlined my-2">
-                      developer_mode
-                    </span>
-                    <span class="text-lg font-medium">Technical Skills</span>
-                  </div>
-                </span>
-                <div class="text-md font-medium">Proficient</div>
-                <hr class="opacity-5 m-2">
-                <span class="block ml-4">
-                  <div class="div"></div>
-                  <ul class="list-disc ml-8 mt-2">
-                    <li class="text-sm text-gray-600">
-                      <img class="h-6 w-6 inline-block mr-2" src="assets/svgs/icons8-python.svg" alt="Python">
-                      Python
-                    </li>
-                    <li class="text-sm text-gray-600">
-                      <img class="h-6 w-6 inline-block mr-2 mt-2" src="assets/svgs/icons8-mongodb.svg" alt="MongoDB">
-                      MongoDB
-                    </li>
-                    <li class="text-sm text-gray-600">
-                      <img class="h-6 w-6  inline-block mr-2 mt-2" src="assets/svgs/icons8-javascript.svg" alt="JavaScript">
-                      JavaScript
-                    </li>
-                  </ul>
-                </span>
-                <div class="text-md font-medium">Familiar</div>
-                <hr class="opacity-5 m-2">
-                <span class="block ml-4">
-                  <div class="div"></div>
-                  <ul class="list-disc ml-8 mt-2">
-                    <li class="text-sm text-gray-600">
-                      <img class="h-6 w-6 inline-block mr-2 mt-2" src="assets/svgs/icons8-amazon-web-services.svg" alt="AWS">
-                      AWS Services
-                    </li>
-                    <li class="text-sm text-gray-600">
-                      <img class="h-6 w-6 inline-block mr-2 mt-2" src="assets/svgs/sql-svgrepo-com.svg" alt="SQL">
-                      SQL
-                    </li>
-                  </ul>
-                </span>
-              </div>
-            </div>
-
-
-
-
-
-
-    <div class="w-full ml-4 mx-2">
-      <div class="space-y-4 my-4 m-2 mt-4 w-full rounded-2xl border p-6 shadow-md">
-        <div class="space-y-4">
-          <span class="block ml-2">
-            <div class="space-x-4 flex items-center">
-              <span class="material-symbols-outlined my-2">
-                school
-              </span>
-              <span class="text-lg font-medium">Certifications</span>
-            </div>
-          </span>
-          <span class="block ml-4">
-            <div class="flex space-x-2 items-center">
-              <img class="w-10 h-10 rounded-full shadow-md border border-white p-1" src="assets/svgs/certification-icon.svg" alt="Certification Icon">
-              <span class="text-md font-medium">Certification Name</span>
-            </div>
-            <p class="ml-10 mt-2 text-sm text-gray-600">
-              <strong>Certifying Body</strong>, <em><span style="opacity: 0.7;" class="ml-1">Date Obtained</em></span>
-            </p>
-          </span>
-          <span class="block ml-4">
-            <div class="flex space-x-2 items-center">
-              <img class="w-10 h-10 rounded-full shadow-md border border-white p-1" src="assets/svgs/certification-icon.svg" alt="Certification Icon">
-              <span class="text-md font-medium">Cloud Computing Certification</span>
-            </div>
-            <p class="ml-10 mt-2 text-sm text-gray-600">
-              <strong>Cloud Certification Organization</strong>, <em><span style="opacity: 0.7;" class="ml-1">Date Obtained</em></span>
-            </p>
-          </span>
-          <span class="block ml-4">
-            <div class="flex space-x-2 items-center">
-              <img class="w-10 h-10 rounded-full shadow-md border border-white p-1" src="assets/svgs/certification-icon.svg" alt="Certification Icon">
-              <span class="text-md font-medium">IT Security Certification</span>
-            </div>
-            <p class="ml-10 mt-2 text-sm text-gray-600">
-              <strong>IT Security Certification Organization</strong>, <em><span style="opacity: 0.7;" class="ml-1">Date Obtained</em></span>
-            </p>
-          </span>
-        </div>
+        </a>
+      </div>
+      <div class="space-y-12 lg:pl-16 xl:pl-24">
+        <a id="technical skills" href="#" class="ml-4  block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+          <div class="flex space-x-4 items-center mb-2">
+            <span class="material-symbols-outlined my-2">
+              build
+            </span>
+            <span class="text-lg font-medium dark:text-white">Familiar with:</span>
+          </div>
+        </a>
+      </div>
+      <div class="space-y-12 lg:pl-16 xl:pl-24">
+        <a id="technical skills" href="#" class="ml-4  block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+          <div class="flex space-x-4 items-center mb-2">
+            <span class="material-symbols-outlined my-2">
+              school
+            </span>
+            <span class="text-lg font-medium dark:text-white">Education:</span>
+          </div>
+        </a>
       </div>
     </div>
+    </div>
+    <hr class="opacity-25 w-full my-6">
 
 
 
 
-          <!-- Education Section -->
-          <div class="w-full ml-4 mx-2">
-            <div class="space-y-4 my-4 m-2 mt-4 w-full rounded-2xl border p-6 shadow-md">
-              <div class="space-y-4 mx-2">
-                <span class="block ml-2">
-                  <div class="space-x-4 flex items-center">
-                    <span class="material-symbols-outlined my-2">
-                      school
-                    </span>
-                    <span class="text-lg font-medium">Education</span>
-                  </div>
-                </span>
-                <span class="block ml-4">
-                  <div class="flex space-x-2 items-center">
-                    <img class="w-10 h-10 rounded-full shadow-md border border-white p-1" src="assets/images/esher.jpg" alt="University Icon">
-                    <span class="text-md font-medium">Esher College</span>
-                  </div>
-                  <p class="ml-10 mt-2 text-sm text-gray-600">
-                    <strong>A-Levels: Mathematics, IT, History</strong>, <em><span style="opacity: 0.7;" class="ml-1">2017-2019</em></span>
-                  </p>
-                  <p class="ml-14 mt-2 text-sm text-gray-600">
-                    Mathematics: B, IT: A*, History: B
-                  </p>
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-        </div>
 
 
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
+
+
+
+
+
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
     <script src="index.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="email.js"></script>
-    <script>
-      Holder.addTheme('thumb', {
-        bg: '#55595c',
-        fg: '#eceeef',
-        text: 'Thumbnail'
-      });
-    </script>
-
+    <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
   </body>
 </html>

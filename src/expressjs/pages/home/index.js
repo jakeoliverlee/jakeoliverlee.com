@@ -1,41 +1,47 @@
 const audio = new Audio("sounds/dark_light.wav");
-$('#dark_mode_icon').on('click', () => {
+$('#theme-toggle').on('click', () => {
   audio.play();
 });
 
-const visitorCount = document.getElementById("visitor-count");
+var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
 
-updateCounter();
 
-function updateCounter() {
-  fetch("http://127.0.0.1:3000?")
-    .then(res => res.json())
-    .then(data => {
-      visitorCount.textContent = data.visits;
-    })
+// Change the icons inside the button based on previous settings
+if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    themeToggleLightIcon.classList.remove('hidden');
+} else {
+    themeToggleDarkIcon.classList.remove('hidden');
+
 }
 
-sessionStorage.setItem("visit", "x");
+var themeToggleBtn = document.getElementById('theme-toggle');
 
+themeToggleBtn.addEventListener('click', function() {
 
-function setActiveLink() {
-  const currentPage = window.location.pathname; // Get the current page path
-  const links = document.querySelectorAll('.nav a'); // Get all the links in the navbar
+    // toggle icons inside button
+    themeToggleDarkIcon.classList.toggle('hidden');
+    themeToggleLightIcon.classList.toggle('hidden');
 
-  // Loop through the links and remove the active class from all of them
-  links.forEach(link => {
-    link.classList.remove('text-primary');
-  });
+    // if set via local storage previously
+    if (localStorage.getItem('color-theme')) {
+        if (localStorage.getItem('color-theme') === 'light') {
+            document.documentElement.classList.add('dark');
+            localStorage.setItem('color-theme', 'dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+            localStorage.setItem('color-theme', 'light');
+        }
 
-  // Add the active class to the appropriate link based on the current page
-  if (currentPage === '/index.html#') {
-    document.getElementById('work-experience-link').classList.add('text-primary');
-  } else if (currentPage === '/projects') {
-    document.getElementById('projects-link').classList.add('text-primary');
-  } else if (currentPage === '/recognition') {
-    document.getElementById('recognition-link').classList.add('text-primary');
-  }
-}
+    // if NOT set via local storage previously
+    } else {
+        if (document.documentElement.classList.contains('dark')) {
+            document.documentElement.classList.remove('dark');
+            localStorage.setItem('color-theme', 'light');
+        } else {
+            document.documentElement.classList.add('dark');
+            localStorage.setItem('color-theme', 'dark');
+        }
+    }
 
-// Call the setActiveLink function when the page loads
-window.onload = setActiveLink;
+});
