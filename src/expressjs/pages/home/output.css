@@ -52,6 +52,9 @@
     transform: scale(1.05);
   }
 
+  .img hover {
+    transform: scale(1.05);
+  }
 
   .social-icons a:hover img {
     transform: scale(1.05);
