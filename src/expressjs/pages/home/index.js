@@ -5,7 +5,7 @@ $('#dark_mode_icon').on('click', () => {
 
 var currentTime = new Date();
 var year = currentTime.getFullYear();  
-document.getElementById("copyright_year").innerHTML ="©" + new Date().getFullYear() + " Jake Lee.";
+document.getElementById("copyright_year").innerHTML ="©" + new Date().getFullYear() + " Jake Lee";
 
 const visitorCount = document.getElementById("visitor-count");
 

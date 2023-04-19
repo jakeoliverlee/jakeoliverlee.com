@@ -7,6 +7,22 @@
 2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
 */
 
+@media (max-width: 640px) {
+  .social-icons {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .blog-header-logo {
+    font-size: 1.5rem;
+  }
+  .flex:nth-child(2) {
+    width: 40%;
+  }
+}
+
+
 *,
 ::before,
 ::after {
@@ -52,9 +68,6 @@
     transform: scale(1.05);
   }
 
-  .img hover {
-    transform: scale(1.05);
-  }
 
   .social-icons a:hover img {
     transform: scale(1.05);
