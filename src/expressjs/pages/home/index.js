@@ -7,16 +7,15 @@ var currentTime = new Date();
 var year = currentTime.getFullYear();  
 document.getElementById("copyright_year").innerHTML ="©" + new Date().getFullYear() + " Jake Lee";
 
-const visitorCount = document.getElementById("visitor-count");
+const observer = new IntersectionObserver(entries => {
+  // Loop over the entries
+  entries.forEach(entry => {
+    // If the element is visible
+    if (entry.isIntersecting) {
+      // Add the animation class
+      entry.target.classList.add('square-animation');
+    }
+  });
+});
 
-updateCounter();
-
-function updateCounter() {
-  fetch("http://127.0.0.1:3000?")
-    .then(res => res.json())
-    .then(data => {
-      visitorCount.textContent = data.visits;
-    })
-}
-
-sessionStorage.setItem("visit", "x");
+observer.observe(document.querySelector('.square'));

@@ -1,0 +1,28 @@
+DCO 3: 
+
+
+    Throughout the first 6 months of my tenure I was working remotely studying for the completion for four exams: CompTIA A+ (both 1001 and 1002), CompTIA Network+ and CompTIA Linux+. After passing these exams I was on-boarded to complete further on-the-job training
+    Parsing logs to diagnose hardware failure - system event logs, dmesg.
+    Leading smaller-scale projects to improve the welfare of local data-centre staff.
+    Some of the technologies I was using: IPMI, Network Link Troubleshooting, Network Troubleshooting, Hardware, BMC, PXE
+    Handle emergency situations: Respond to and manage emergency situations, such as power outages or equipment failures, and ensure that systems are brought back online as quickly as possible.
+    Throughout my time as DCO level three, I returned a significant amount of un-sellable capacity to production to be used by our customers, I was one of the leading technicians in this regard.
+
+
+DCO 4: 
+
+    In December 2022 I was promoted to DCO level 4, at this stage I was still heavily involved in the day-to-day operations of our data centres however I was a lot more involved in the mentorship of newer technicians.
+    I wrote technical documentation to help newer technicians with break/fix issues, a particular document I wrote was implemented globally and is in use today by Amazon data centre technicians around the world.
+    I completely re-designed the on-boarding experience for newer technicians, including a more updated specification of what technicians are expected to know.
+    I lead larger scale projects including the build out of network infrastructure for our newer data centres. I worked heavily with different stakeholders throughout the projects and gained a lot of good relationships along the way.
+    During my time as DCO level 4 I achieved my CCNA as well as other AWS cloud computing certifications. I was also building upon my development skills in the mean time - introducing myself to Python and databases such as MongoDB and SQL.
+    I maintained and developed scripts to improve the operational efficiency of staff. One example being a powershell script to automate the creation of tickets that would pull data from an Amazon backend. This enabled a 125% boost in time efficiency.
+
+
+DCO Team Lead :
+
+
+    In January 2023, I was chosen to take over the role as a Team Lead to lead a team of around 12 technicians on my shift. A lot of my day is spent dealing with technical escalations as well as general mentorship for technicians on my shift.
+    I host daily standup calls to go over any blockers the team has, including setting the priorities for the team.
+    I honed in further on my development skills; learning about Javascript frameworks such as React, ExpressJS as well as backends like NodeJS which led to the creation of this resume website I built entirely in my spare time.
+    I developed Streamline; a Python web application built entirely in Python, based on the web-framework Streamlit, hosted entirely on AWS. It's purpose was very broad, however I built it with a goal in mind of creating a better UI for our already made scripts - the scripts we had were useful, but interacting with the scripts via CLI did not provide a good user experience as well as version control for locally downloaded scripts being non-existent. So I centralized everything into one application.
