@@ -137,8 +137,8 @@
           </div>
         </div>
       </ol>
-    
-      
+
+
 
 <section class="bg-white dark:bg-zinc-900">
   <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16">
@@ -196,7 +196,7 @@
     </div>
 
     <div class="grid grid-cols-1 mt-12 text-center sm:mt-16 gap-x-20 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
-      <div id="Streamline" class="space-y-4">
+      <div id="Streamline" class="reveal space-y-4">
         <span class="bg-gray-100 text-gray-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
           Amazon Inc.
         </span>
@@ -215,7 +215,7 @@
         </button>
       </div>
 
-      <div id="resume" class="space-y-4">
+      <div id="resume" class="reveal space-y-4">
         <span
           class="bg-gray-100 text-gray-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
           Personal
@@ -224,24 +224,24 @@
           Official website
         </h3>
         <p class="text-lg font-normal text-gray-500 dark:text-gray-400">
-          This website is my personal resume website, it was built using React, styled with Tailwind CSS with NodeJS as its runtime environment. 
+          This website is my personal resume website, it was built using React, styled with Tailwind CSS with NodeJS as its runtime environment.
         </p>
         <div class="flex w-full flex-items-center justify-center">
-          <img class="h-10 w-10 inline-block mr-2 p-1 rounded-full" src="assets/svgs/express-svgrepo-com.svg" alt="ExpressJS" style="background-color: white;"> 
+          <img class="h-10 w-10 inline-block mr-2 p-1 rounded-full" src="assets/svgs/express-svgrepo-com.svg" alt="ExpressJS" style="background-color: white;">
           <img class="h-10 w-10 inline-block mr-2 rounded-full" src="assets/svgs/node-js-svgrepo-com.svg" alt="NodeJS">
           <img class="h-10 w-10 inline-block mr-2 rounded-full" src="assets/svgs/icons8-mongodb.svg" alt="MongoDB">
           <img class="h-10 w-10 inline-block mr-2 rounded-full" src="assets/svgs/react-javascript-js-framework-facebook-svgrepo-com.svg" alt="React">
           <img class="h-10 w-10 inline-block mr-2 rounded-full" src="assets/svgs/tailwind-css-icon.svg" alt="Tailwind">
-        </div>            
+        </div>
         <button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2" onclick="goToPage()">
           Read more
         </button>
         </a>
       </div>
-      
-      
 
-      <div id="PassSave" class="space-y-4">
+
+
+      <div id="PassSave" class="reveal space-y-4">
         <span
           class="bg-gray-100 text-gray-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
           Personal
@@ -250,7 +250,7 @@
           PassSave
         </h3>
         <p class="text-lg font-normal text-gray-500 dark:text-gray-400">
-          PassSave is a password-manager GUI application built using Python's tkinter module. 
+          PassSave is a password-manager GUI application built using Python's tkinter module.
         </p>
         <div class="flex w-full flex-items-center justify-center min-h-3">
           <img class="h-10 w-10 inline-block mr-2" src="assets/svgs/icons8-python.svg" alt="Python"> <!-- Move the img tag here -->
@@ -273,7 +273,7 @@
     </div>
     <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
     <div class="sm:flex sm:items-center sm:justify-between">
-        <span id="copyright_year" class="text-sm text-gray-500 sm:text-center dark:text-gray-400"><a href="https://flowbite.com/" class="hover:underline"></a>. 
+        <span id="copyright_year" class="text-sm text-gray-500 sm:text-center dark:text-gray-400"><a href="https://flowbite.com/" class="hover:underline"></a>.
         </span>
         <div class="text-sm text-gray-500 sm:text-center dark:text-gray-400"></div>
         <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
@@ -316,6 +316,24 @@
     window.location.href = "/work"; // Replace with the URL of the page you want to navigate to
     }
   </script>
+  <script>
+    window.addEventListener("scroll", reveal);
+
+    function reveal(){
+      var reveals = document.querySelectorAll(".reveal");
+      for(var i = 0; i < reveals.length; i++) {
+
+        var windowheight = window.innerHeight;
+        var revealtop = reveals[i].getBoundingClientRect().top;
+        var revealpoint = 150;
+
+        if(revealtop < windowheight - revealpoint){
+          reveals[i].classList.add("active");
+        }
+      }
+    }
+  </script>
+
 
 
   </body>
