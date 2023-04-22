@@ -13,30 +13,35 @@
 .reveal {
   position: relative;
   filter: blur(5px);
-  transform: translateX(-100%);
   opacity: 0;
   transition: all 1s ease;
 }
 
-.reveal.active {
-  transform: translateY(0px);
+.reveal.active:first-child {
+  transform: translateX(0%);
   filter: blur(0);
   opacity: 1;
+  transition: all 1s ease 0.5s;
 }
 
-.reveal:nth-child() {
+.reveal.active:not(:first-child) {
+  transform: translateX(0%);
+  filter: blur(0);
+  opacity: 1;
+  transition: all 1s ease 0.5s;
+}
+
+
+.reveal:nth-child(1) {
+  transform: translateX(-100%);
   transition-delay: 200ms;
 }
 
-.reveal:nth-child() {
+.reveal:nth-child(2) {
+  transform: translateX(100%);
   transition-delay: 400ms;
-
 }
 
-.reveal:nth-child() {
-  transition-delay: 600ms;
-
-}
 
 
 *,
