@@ -12,6 +12,7 @@
     <!-- Bootstrap core CSS -->
     <!-- Icons for socials -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
     <script src="https://kit.fontawesome.com/85539b08a7.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/@codersrank/skills-chart@x.x.x/codersrank-skills-chart.min.js"></script>
     <!-- Custom styles for this template -->
@@ -23,7 +24,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   </head>
 
-  <!-- Nav bar -->
+  <!-- Header bar -->
   <body class="flex flex-col items-center bg-slate-100 dark:bg-black dark:text-white">
     <div id="main" class="nav max-w-5xl container mx-auto bg-white dark:bg-zinc-900 m-2 px-6 rounded-lg">
       <header class="blog-header py-3 flex flex-wrap items-center justify-between">
@@ -44,10 +45,6 @@
           <a class="blog-header-logo text-dark" href="#">Jake Lee</a>
         </div>
         <div class="w-full sm:w-1/4 flex justify-end items-center">
-            <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-1 mr-4">
-              <svg id="theme-toggle-dark-icon" class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-              <svg id="theme-toggle-light-icon" class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-          </button>
           <div class="relative">
             <div class="absolute inset-0 bg-blue-200 rounded-lg blur-sm opacity-75"></div>
           <a type="button" id="Contact_Me" class="relative text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-4 py-2  dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 shadow-md" href="mailto:jakeoliverlee@gmail.com">Contact Me</a>
@@ -57,13 +54,14 @@
       </header>
     </div>
 
-    <div class="py-1 nav-scroller mb-2 mt-1 ml-5 justify-start text-left rounded-full bg-white/90 dark:bg-zinc-900 ring-1 r dark:ring-zinc-300/20  text-sm font-medium shadow-md">
+    <!-- Nav bar -->
+    <div id="navbar" class="py-1 nav-scroller  mb-2 mt-1 ml-5 justify-start text-left rounded-full bg-white/90 dark:bg-zinc-900 ring-1 r dark:ring-zinc-300/20  text-sm font-medium shadow-md">
       <nav class="px-3 nav d-flex justify-between">
         <div class="flex-1">
           <a id="work-experience-link" class="font-sans block px-3 py-2 text-muted hover:text-blue-700 dark:hover:text-blue-200" href="#projects">Projects</a>
         </div>
         <div class="flex-1">
-          <a id="projects-link" class="font-sans block px-3 py-2 text-muted hover:text-blue-700 dark:hover:text-blue-200" href="/work">Work</a>
+          <a id="projects-link" class="font-sans block px-3 py-2 text-muted hover:text-blue-700 dark:hover:text-blue-200" href="#work_experience">Work</a>
         </div>
         <div class="flex-1">
           <a id="recognition-link" class="font-sans block px-3 py-2 text-muted hover:text-blue-700 dark:hover:text-blue-200" href="#">Gadgets</a>
@@ -71,6 +69,7 @@
       </nav>
     </div>
 
+    <!-- About me -->
     <div class="container max-w-5xl  mx-auto h-full bg-white dark:bg-zinc-900 m-2 px-8 rounded-lg">
       <div id="about-me" class="mt-7 ml-4 p-3">
         <div class="flex flex-wrap md:flex-no-wrap">
@@ -83,68 +82,15 @@
             </p>
           </div>
           <div class="flex-none mt-4 md:mt-0 ml-16 mb-4">
-            <img class="mr-10 w-36 h-36 p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500" src="assets/images/about.jpg" alt="Bordered avatar">
+            <img id="handsome" class="mr-10 w-36 h-36 p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500 hidden sm:block" src="assets/images/about.jpg" alt="Bordered avatar">
           </div>
         </div>
-        <hr class="border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-        <div class="flex space-x-4 items-center mb-2">
-          <span class="material-symbols-outlined my-2">
-            work
-          </span>
-          <span class="text-lg font-medium dark:text-white">Work Experience</span>
-        </div>
-        <div class="flex items-center mb-2">
-        </div>
+        <hr class="my-2 sm:my-0 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8 opacity-50" />
 
-        <div class="flex flex-row justify-items-center">
-          <ol class="h-flex-none max-w-full relative border-l border-gray-200 dark:border-gray-700 ml-4">
-            <li class="mb-10 ml-4">
-                <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-                <div class="flex flex-wrap">
-                  <img id="dark_mode_aws" class="w-10 h-10 my-2 mb-2 rounded-full shadow-md border border-white p-1" src="assets/svgs/dark_aws.svg" alt="Dark mode AWS Icon">
-                  <div class="text-sm flex items-center ml-3 mt-1 mb-2">Amazon Web Services</div>
-                </div>
-                <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Jan 2023 - present</time>
-                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">DCO Shift Team Lead</h3>
-            </li>
-            <li class="mb-10 ml-4">
-              <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-              <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Dec 2022 - Jan 2023 · 1 mo
-                <span class="ml-2">
-                  <i class="fas fa-arrow-up text-blue-500"></i>
-                </span>
-              </time>
-              <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Datacentre Operations Tech IV</h3>
-            </li>
-            <li class="mb-10 ml-4">
-              <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-              <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Nov 2020 - Nov 2022 · 2 yrs 1 mo
-                <span class="ml-2">
-                  <i class="fas fa-arrow-up text-blue-500"></i>
-                </span>
-              </time>
-              <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Datacentre Operations Tech III</h3>
-            </li>
-            <li class="ml-4">
-                <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-2 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-                <div class="flex flex-wrap">
-                  <img id="qq logo" class="w-10 h-10 mb-4 rounded-full shadow-md border border-white p-1" src="assets/svgs/QQ.L.svg" alt="qq logo">
-                  <div class="text-sm flex items-center ml-3 mt-1 mb-6">QinetiQ</div>
-                </div>
-                <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Aug 2019 - Nov 2020 · 1 yr 4 mos</time>
-                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Shift Service Desk Agent</h3>
-                <p class="mb-2 text-xs font-normal text-gray-500 dark:text-gray-400">
-                <a href="assets/cv.pdf" class="inline-flex items-center px-4 mt-6 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 shadow-md dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700">Download CV<svg class="w-3 h-3 ml-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></a>
-            </li>
-          </div>
-        </div>
-      </ol>
-
-
-
+        <!-- Skills section -->
 <section class="bg-white dark:bg-zinc-900">
-  <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16">
-      <div class="bg-gray-50 dark:bg-zinc-900  rounded-lg p-8 md:p-12 mb-8">
+  <div class="py-4 px-4 mx-auto max-w-screen-xl lg:py-8">
+      <div class="bg-none rounded-lg p-8 md:p-12 mb-8">
           <h1 class="text-gray-900 dark:text-white text-3xl md:text-5xl font-extrabold mb-2">Here's what I know so far...</h1>
           <p class="text-lg font-normal text-gray-500 dark:text-gray-400 mb-6">Static websites are now used to bootstrap lots of websites and are becoming the basis for a variety of tools that even influence both web designers and developers.</p>
           <a href="#" class="inline-flex justify-center items-center py-2.5 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
@@ -153,30 +99,39 @@
           </a>
       </div>
       <div class="grid md:grid-cols-2 gap-8">
-          <div class="reveal bg-gray-50 dark:bg-zinc-900 rounded-lg p-8 md:p-12">
-              <a href="#" class="bg-green-100 text-green-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md dark:bg-gray-700 dark:text-green-400 mb-2">
-                  <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                      <path clip-rule="evenodd" fill-rule="evenodd" d="M4 2a2 2 0 00-2 2v11a3 3 0 106 0V4a2 2 0 00-2-2H4zm1 14a1 1 0 100-2 1 1 0 000 2zm5-1.757l4.9-4.9a2 2 0 000-2.828L13.485 5.1a2 2 0 00-2.828 0L10 5.757v8.486zM16 18H9.071l6-6H16a2 2 0 012 2v2a2 2 0 01-2 2z"></path>
-                  </svg>
-                  Design
-              </a>
-              <h2 class="text-gray-900 dark:text-white text-3xl font-extrabold mb-2">Start with Flowbite Design System</h2>
-              <p class="text-lg font-normal text-gray-500 dark:text-gray-400 mb-4">Static websites are now used to bootstrap lots of websites and are becoming the basis for a variety of tools that even influence both web designers and developers.</p>
+          <div class="bg-none rounded-lg p-8 md:p-12">
+              <h2 class="text-gray-900 dark:text-white text-3xl font-extrabold mb-2">Technologies that I am proficient in
+              </h2>
+              <div class="grid grid-cols-3">
+              <ul class="mb-4 my-2">
+                <li>test</li>
+              </ul>
+              <ul class="mb-4 my-2">
+                <li>test</li>
+              </ul>
+              <ul class="mb-4 my-2">
+                <li>test</li>
+              </ul>
+            </div>
               <a href="#" class="text-blue-600 dark:text-blue-500 hover:underline font-medium text-lg inline-flex items-center">Read more
                   <svg aria-hidden="true" class="w-4 h-4 ml-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                   </svg>
               </a>
           </div>
-          <div class="reveal bg-gray-50 dark:bg-zinc-900 rounded-lg p-8 md:p-12">
-              <a href="#" class="bg-purple-100 text-purple-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md dark:bg-gray-700 dark:text-purple-400 mb-2">
-                  <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                      <path clip-rule="evenodd" fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z"></path>
-                  </svg>
-                  Code
-              </a>
-              <h2 class="text-gray-900 dark:text-white text-3xl font-extrabold mb-2">Best react libraries around the web</h2>
-              <p class="text-lg font-normal text-gray-500 dark:text-gray-400 mb-4">Static websites are now used to bootstrap lots of websites and are becoming the basis for a variety of tools that even influence both web designers and developers.</p>
+          <div class="bg-none rounded-lg p-8 md:p-12">
+              <h2 class="text-gray-900 dark:text-white text-3xl font-extrabold mb-2">Technologies that I am familiar with</h2>
+              <div class="grid grid-cols-3">
+                <ul class="mb-4 my-2">
+                  <li>test</li>
+                </ul>
+                <ul class="mb-4 my-2">
+                  <li>test</li>
+                </ul>
+                <ul class="mb-4 my-2">
+                  <li>test</li>
+                </ul>
+              </div>
               <a href="#" class="text-blue-600 dark:text-blue-500 hover:underline font-medium text-lg inline-flex items-center">Read more
                   <svg aria-hidden="true" class="w-4 h-4 ml-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
@@ -187,6 +142,8 @@
   </div>
 </section>
 
+
+<!-- Skill visualization section -->
 <section class="bg-white dark:bg-zinc-900">
   <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
       <div class="mr-auto place-self-center lg:col-span-7">
@@ -204,9 +161,66 @@
   </div>
 </section>
 
+      <div id="work_experience" class="reveal flex space-x-4 items-center mb-2">
+        <lord-icon
+            src="https://cdn.lordicon.com/rfnfarqt.json"
+            trigger="loop"
+            stroke="35"
+            style="width:40px;height:40px">
+        </lord-icon>
+        <span class="text-lg font-medium dark:text-white">Work Experience</span>
+      </div>
+      <div class="flex items-center mb-2">
+      </div>
+        <!-- Work Experience Section -->
+        <div class="reveal flex flex-row justify-items-center">
+          <ol class="h-flex-none max-w-full relative border-l border-gray-200 dark:border-gray-700 ml-4">
+            <li class="mb-10 ml-4">
+                <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                <div class="flex flex-wrap">
+                  <img id="dark_mode_aws" class="w-10 h-10 my-2 mb-2 rounded-full shadow-md border border-white p-1" src="assets/svgs/dark_aws.svg" alt="Dark mode AWS Icon">
+                  <div class="text-md flex items-center ml-3 mt-1 mb-2">Amazon Web Services</div>
+                </div>
+                <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Jan 2023 - present</time>
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">DCO Shift Team Lead</h3>
+            </li>
+            <li class="mb-10 ml-4">
+              <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+              <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Dec 2022 - Jan 2023 · 1 mo
+                <span class="ml-2">
+                  <i class="fas fa-arrow-up text-blue-500"></i>
+                </span>
+              </time>
+              <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Datacentre Operations Tech IV</h3>
+            </li>
+            <li class="mb-10 ml-4">
+              <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+              <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Nov 2020 - Nov 2022 · 2 yrs 1 mo
+                <span class="ml-2">
+                  <i class="fas fa-arrow-up text-blue-500"></i>
+                </span>
+              </time>
+              <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Datacentre Operations Tech III</h3>
+            </li>
+            <li class="ml-4">
+                <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-2 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                <div class="flex flex-wrap">
+                  <img id="qq logo" class="w-10 h-10 mb-4 rounded-full shadow-md border border-white p-1" src="assets/svgs/QQ.L.svg" alt="qq logo">
+                  <div class="text-md flex items-center ml-3 mt-1 mb-6">QinetiQ</div>
+                </div>
+                <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Aug 2019 - Nov 2020 · 1 yr 4 mos</time>
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Shift Service Desk Agent</h3>
+                <p class="mb-2 text-xs font-normal text-gray-500 dark:text-gray-400">
+                <a href="assets/cv.pdf" class="inline-flex items-center px-4 mt-6 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 shadow-md dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700">Download CV<svg class="w-3 h-3 ml-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></a>
+            </li>
+          </div>
+        </div>
+      </ol>
 
-<section id="projects" class="bg-white dark:bg-zinc-900  antialiased">
-  <div class="max-w-screen-xl px-4 py-8 mx-auto lg:px-6 sm:py-16 lg:py-24">
+<!-- Projects section -->
+
+  <section id="projects" class="bg-white dark:bg-zinc-900  antialiased">
+  <div class="reveal max-w-screen-xl px-4 py-8 mx-auto lg:px-6 sm:py-16 lg:py-24">
     <div class="max-w-2xl mx-auto text-center">
       <h2 class="text-3xl font-extrabold leading-tight tracking-tight text-gray-900 sm:text-4xl dark:text-white">
         Some of my work
@@ -215,6 +229,7 @@
         Here are some of the projects I have completed in my own time during my self-taught journey.
       </p>
     </div>
+
 
     <div class="grid grid-cols-1 mt-12 text-center sm:mt-16 gap-x-20 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
       <div id="Streamline" class="reveal space-y-4">
@@ -286,6 +301,10 @@
 </section>
 
 
+
+
+
+<!-- Footer section -->
 <footer class="bg-white dark:bg-zinc-900">
   <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
       <div class="md:flex md:justify-between">
@@ -294,7 +313,7 @@
     </div>
     <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
     <div class="sm:flex sm:items-center sm:justify-between">
-        <span id="copyright_year" class="text-sm text-gray-500 sm:text-center dark:text-gray-400"><a href="https://flowbite.com/" class="hover:underline"></a>.
+        <span id="copyright_year" class="text-sm text-gray-500 sm:text-center dark:text-gray-400"><a href="https://flowbite.com/" class="hover:underline">© 2023. Jake Lee</a>.
         </span>
         <div class="text-sm text-gray-500 sm:text-center dark:text-gray-400"></div>
         <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
@@ -333,9 +352,6 @@
       fg: '#eceeef',
       text: 'Thumbnail'
     });
-    function goToPage() {
-    window.location.href = "/work"; // Replace with the URL of the page you want to navigate to
-    }
   </script>
   <script src="scroll.js"></script>
   </body>
