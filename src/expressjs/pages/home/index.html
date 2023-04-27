@@ -52,8 +52,7 @@
     </div>
 
     <!-- Nav bar -->
-    <div id="navbar" class="py-1 nav-scroller  mb-3 mt-1 ml-5 justify-start text-left rounded-full bg-white/90 dark:bg-zinc-900 ring-1 r dark:ring-zinc-300/20  text-sm font-medium shadow-md">
-      <nav class="px-3 nav d-flex justify-between">
+    <div id="navbar" class="py-1 nav-scroller mb-3 mt-1 ml-5 justify-start text-left rounded-full bg-white/90 dark:bg-zinc-900 ring-1 r dark:ring-zinc-300/20 text-sm font-medium shadow-md">      <nav class="px-3 nav d-flex justify-between">
         <div class="flex-1">
           <a id="work-experience-link" class="font-sans block px-3 py-2 text-muted hover:text-blue-700 dark:hover:text-blue-200" href="#projects">Projects</a>
         </div>
@@ -448,5 +447,30 @@
     });
   </script>
   <script src="scroll.js"></script>
+  <script>
+    // Get the navbar element
+    const navbar = document.getElementById("navbar");
+  
+    // Store the initial position of the navbar
+    const initialNavbarPosition = navbar.offsetTop;
+  
+    // Function to handle the scroll event
+    function handleScroll() {
+      // Get the scroll position
+      const scrollPosition = window.pageYOffset;
+  
+      // Check if the scroll position is greater than or equal to the initial position of the navbar
+      if (scrollPosition >= initialNavbarPosition) {
+        // Set the position of the navbar to fixed
+        navbar.classList.add("fixed");
+      } else {
+        // Set the position of the navbar back to its original position
+        navbar.classList.remove("fixed");
+      }
+    }
+  
+    // Add a scroll event listener to the window
+    window.addEventListener("scroll", handleScroll);
+  </script>
   </body>
 </html>
