@@ -5,6 +5,3 @@ var bottomBanner = document.getElementById('bottom-banner');
     bottomBanner.classList.add('hidden');
   });
 
-  showBanner.addEventListener('click', function() {
-    bottomBanner.classList.remove('hidden');
-  });
