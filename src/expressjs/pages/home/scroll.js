@@ -5,6 +5,17 @@ var closeBanner = document.getElementById('close_banner');
       bottomBanner.classList.add('hidden');
     });
 
+document.addEventListener('DOMContentLoaded', function() {
+  var handsomeImage = document.getElementById('handsome');
+
+  window.addEventListener('scroll', function() {
+    var scrollTop = window.scrollY;
+    var scale = Math.max(0.5, 1 - scrollTop / 1000);
+
+    handsomeImage.style.transform = `scale(${scale}) rotate(${scrollTop / 20}deg)`;
+  });
+});
+
 window.addEventListener("scroll", reveal);
 
 function reveal(){
