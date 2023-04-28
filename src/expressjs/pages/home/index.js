@@ -1,5 +1,3 @@
-import App from "./components/App";
-
 
 const audio = new Audio("sounds/dark_light.wav");
 $('#dark_mode_icon').on('click', () => {
@@ -36,4 +34,12 @@ themeToggleBtn.addEventListener('click', function() {
 }
 
 });
+
+var closeBanner = document.getElementById('close_banner');
+var bottomBanner = document.getElementById('bottom-banner');
+
+    closeBanner.addEventListener('click', function() {
+      bottomBanner.classList.add('hidden');
+    });
+
 

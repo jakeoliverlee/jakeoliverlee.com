@@ -1,3 +1,10 @@
+var closeBanner = document.getElementById('close_banner');
+    var bottomBanner = document.getElementById('bottom-banner');
+
+    closeBanner.addEventListener('click', function() {
+      bottomBanner.classList.add('hidden');
+    });
+
 window.addEventListener("scroll", reveal);
 
 function reveal(){
@@ -13,3 +20,7 @@ function reveal(){
     }
   }
 }
+
+// Add a scroll event listener to the window
+window.addEventListener("scroll", handleScroll);
+
