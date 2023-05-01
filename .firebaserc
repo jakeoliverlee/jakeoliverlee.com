@@ -1,5 +1,11 @@
 {
   "projects": {
     "default": "jakeoliverlee-main"
+  },
+  "targets": {},
+  "etags": {
+    "jakeoliverlee-main": {
+      "extensionInstances": {}
+    }
   }
 }

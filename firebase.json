@@ -3,7 +3,7 @@
     "rules": "database.rules.json"
   },
   "hosting": {
-    "public": "public",
+    "public": "src/expressjs/pages/home",
     "ignore": [
       "firebase.json",
       "**/.*",
