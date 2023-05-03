@@ -3,30 +3,18 @@ const phrases = ['A Visualization of my skills over time.'];
 let i = 0;
 let j = 0;
 let currentPhrase = [];
-let isDeleting = false;
 
 function loop() {
   if (i < phrases.length) {
-    if (!isDeleting && j <= phrases[i].length) {
+    if (j <= phrases[i].length) {
       currentPhrase.push(phrases[i][j]);
       j++;
-    } else if (isDeleting && j > 0) {
-      currentPhrase.pop();
-      j--;
     }
 
     textDisplay.innerHTML = currentPhrase.join(''); // Update innerHTML after modifying currentPhrase
 
-    if (j === phrases[i].length && !isDeleting) {
-      isDeleting = true;
-      setTimeout(loop, 2000); // Pause time before starting to delete.
-    } else if (j === 0 && isDeleting) {
-      isDeleting = false;
-      i = (i + 1) % phrases.length; // Make the effect loop continuously.
-      currentPhrase = []; // Clear the current phrase before typing the next phrase.
-      setTimeout(loop, 500); // Short delay before typing the next phrase.
-    } else {
-      setTimeout(loop, isDeleting ? 100 : 100); // Typing and deleting speed.
+    if (j <= phrases[i].length) {
+      setTimeout(loop, 100); // Typing speed.
     }
   }
 }
@@ -44,6 +32,12 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 observer.observe(textDisplay);
+
+
+// Function to apply the animation
+
+
+
 
 
 
