@@ -15,7 +15,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
     <script src="https://kit.fontawesome.com/85539b08a7.js" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/@codersrank/skills-chart@x.x.x/codersrank-skills-chart.min.js"></script>
+    <script src="https://unpkg.com/@codersrank/skills-chart@x.x.x/codersrank-skills-chart.min.js" defer></script>
     <!-- Custom styles for this template -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -90,9 +90,9 @@
 <section class="bg-white dark:bg-zinc-900">
   <div class="py-4 px-4 mx-auto max-w-screen-xl lg:py-8">
       <div class="bg-none rounded-lg p-8 md:p-12 mb-8">
-          <h1 class="text-gray-900 dark:text-white text-3xl md:text-5xl font-extrabold mb-2 select-none">Here's what I know so far...</h1>
-          <p class="text-lg font-normal text-gray-500 dark:text-gray-400 mb-6">Here are some of the skills I have picked up along the way, broken down into proficient and familiar. </p>
-          </div>
+        <h1 class="text-gray-900 dark:text-white text-3xl md:text-5xl font-extrabold mb-2 select-none">Here's what I know so far...</h1>
+        <p class="text-lg font-normal text-gray-500 dark:text-gray-400 mb-6">Here are some of the skills I have picked up along the way, broken down into proficient and familiar. </p>
+      </div>
       <div class="grid md:grid-cols-2 gap-8">
           <div class="bg-none rounded-lg p-8 md:p-12">
               <h2 class="text-gray-900 dark:text-white text-3xl font-extrabold mb-2">Technologies that I am proficient in
@@ -197,11 +197,10 @@
       <section class="bg-white dark:bg-zinc-900">
         <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
             <div class="mr-auto place-self-center lg:col-span-7">
-                <h2 class="reveal max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-4xl xl:text-5xl dark:text-white">A Vizualization of my skills overtime</h2>
-                <p class="reveal max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">From checkout to global sales tax compliance, companies around the world use Flowbite to simplify their payment stack.</p>
+            <h2 id="type" class="reveal max-w-2xl mb-6 text-4xl font-extrabold tracking-tight leading-none md:text-4xl xl:text-5xl dark:text-white"></h2>
             </div>
             <div class="lg:mt-0 lg:col-span-5 lg:flex">
-              <codersrank-skills-chart class="reveal m-2"
+              <codersrank-skills-chart class="reveal m-2 mt-2"
                 username="jakeoliverlee"
                 labels
                 legend
@@ -283,8 +282,8 @@
 
 
     <div class="grid grid-cols-1 mt-12 text-center sm:mt-16 gap-x-20 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
-      <div id="Streamline" class="reveal space-y-4">
-        <span class="bg-gray-100 text-gray-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
+      <div class="reveal space-y-4">
+        <span class="bg-gray-100 text-gray-900 shadow-md text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
           Amazon Inc.
         </span>
         <h3 class="text-2xl font-bold leading-tight text-gray-900 dark:text-white">
@@ -297,14 +296,14 @@
           <img class="h-10 w-10 inline-block mr-2" src="assets/svgs/icons8-python.svg" alt="Python">
           <img class="h-10 w-10 inline-block mr-2 rounded-full" src="assets/svgs/aws-icon-services.svg" alt="AWS Services">
         </div>
-        <button type="button" href="" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2" onclick="goToPage()">
+        <button type="button" href="#streamline" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2" onclick="goToPage()">
           Read more
         </button>
       </div>
 
       <div id="resume" class="reveal space-y-4">
         <span
-          class="bg-gray-100 text-gray-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
+          class="bg-gray-100 text-gray-900 shadow-md text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
           Personal
         </span>
         <h3 class="text-2xl font-bold leading-tight text-gray-900 dark:text-white">
@@ -330,7 +329,7 @@
 
       <div id="PassSave" class="reveal space-y-4">
         <span
-          class="bg-gray-100 text-gray-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
+          class="bg-gray-100 text-gray-900 shadow-md text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
           Personal
         </span>
         <h3 class="text-2xl font-bold leading-tight text-gray-900 dark:text-white">
@@ -356,48 +355,51 @@
       <div class="mx-auto flex items-center mb-6 space-x-4">
           <img class="w-10 h-10 mr-2" src="assets/svgs/portfolio-svgrepo-com.svg" alt="">
           <div class="space-y-1 font-medium dark:text-white">
-              <p>Resume</p>
+              <p>Resume Website</p>
           </div>
       </div>
       <ul class="space-y-4 text-sm text-gray-500 dark:text-gray-400">
+          <li class="flex items-center">
+              <span
+                class="bg-gray-100 text-gray-900 text-xs font-medium inline-flex shadow-md items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
+                Released: 03/05/2023
+              </span>
+            </li>
           <li class="flex items-center">
             <a href="https://github.com/jakeoliverlee/resume" class="text-gray-500 hover:text-gray-900 dark:hover:text-white" target="_blank">
               <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" /></svg>
               <span class="sr-only">GitHub account</span>
           </a>
             <span
-          class="ml-2 bg-gray-100 text-gray-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
+          class="ml-2 bg-gray-100 text-gray-900 text-xs shadow-md font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
           v1.0.0
         </span>
           </li>
-          <li class="flex items-center">Tech stack:</li>
           <li class="flex items-center">
-            <img class="w-10 h-10 mr-5 inline-block p-1 rounded-full" src="assets/svgs/express-svgrepo-com.svg" alt="ExpressJS" style="background-color: white;">
-            <img class="w-10 h-10 mr-5 inline-block  rounded-full" src="assets/svgs/node-js-svgrepo-com.svg" alt="NodeJS" >
-            <img class="w-10 h-10 mr-5 inline-block  rounded-full" src="assets/svgs/tailwind-css-icon.svg" alt="Tailwind" >
-            <img class="w-10 h-10 inline-block rounded-full" src="assets/svgs/icons8-mongodb.svg" alt="Mongo" >
+            <img class="w-8 h-8 mr-5 inline-block p-1 rounded-full" src="assets/svgs/express-svgrepo-com.svg" alt="ExpressJS" style="background-color: white;">
+            <img class="w-8 h-8 mr-5 inline-block  rounded-full" src="assets/svgs/node-js-svgrepo-com.svg" alt="NodeJS" >
+            <img class="w-8 h-8 mr-5 inline-block  rounded-full" src="assets/svgs/tailwind-css-icon.svg" alt="Tailwind" >
+            <img class="w-8 h-8 mr-5 inline-block  rounded-full" src="assets/svgs/firebase-icon.svg" alt="Firebase" >
+            <img class="w-8 h-8 inline-block rounded-full" src="assets/svgs/icons8-mongodb.svg" alt="Mongo" >
           </li>
       </ul>
   </div>
-  <div class="col-span-2 mt-6 md:mt-0">
+  <div class="col-span-2 mt-6 my-8 md:mt-0">
       <div class="flex items-start mb-5">
           <div class="pr-4">
-              <footer>
-                  <p class="mb-2 text-sm text-gray-500 dark:text-gray-400">Reviewed: <time datetime="2022-01-20 19:00">*</time></p>
-              </footer>
               <h4 class="text-xl font-bold text-gray-900 dark:text-white">What problem did this solve?</h4>
           </div>
       </div>
-      <ul class="list-disc ml-6 mb-4 text-gray-500 dark:text-gray-400">
+      <ul class="list-disc ml-6 mb-8 text-gray-500 dark:text-gray-400">
         <li class="mb-2">Provides me with an online presence and allows potential employers to view my skills in a centralized location, so they can more efficiently assess whether I am a good fit for the role or not.</li>
-        <li>Enables me to showcase my proficiency in designing and developing fully functional websites, using HTML, CSS, and JavaScript to create engaging user interfaces, as well as integrating non-relational databases such as MongoDB to manage dynamic content.</li>
+        <li class="">Enables me to showcase my proficiency in designing and developing fully functional websites, using HTML, CSS, and JavaScript to create engaging user interfaces, as well as integrating non-relational databases such as MongoDB to manage dynamic content.</li>
       </ul>
-      <div class="flex items-start mb-5">
+      <div class="mt-5 flex items-start mb-5">
         <div class="pr-4">
             <h4 class="text-xl font-bold text-gray-900 dark:text-white">Who are my user base?</h4>
         </div>
     </div>
-    <ul class="list-disc ml-6 mb-5 text-gray-500 dark:text-gray-400">
+    <ul class="list-disc ml-6 mb-8 text-gray-500 dark:text-gray-400">
       <li>Recruiters, hiring managers, clients as well as other potential employers.</li>
     </ul>
     <div class="flex items-start mb-5">
@@ -405,9 +407,11 @@
           <h4 class="text-xl font-bold text-gray-900 dark:text-white">What are some of the technical decisions I made?</h4>
       </div>
     </div>
-    <ul class="list-disc ml-6 mb-4 text-gray-500 dark:text-gray-400">
-      <li>Before the re</li>
-      <li>It is obviously not the same build quality as those very expensive watches. But that is like comparing a Citroën to a Ferrari. This watch was well under £100! An absolute bargain.</li>
+    <ul class="list-disc ml-6 mb-8 text-gray-500 dark:text-gray-400">
+      <li class="mb-2">The frontend for this project was written almost entirely in HTML and <a href="https://tailwindui.com/" class="underline text-blue-400">Tailwind CSS</a>, with a small amount of Javascript. I needed this project to be fully mobile-responsive as well as supporting Dark Mode/Light Mode - TailwindCSS made this very simple to achieve.</li>
+      <li class="mb-2">The backend is written in NodeJS, based on the ExpressJS framework, which I used in my developer environment to spin up a locally hosted server.</li>
+      <li class="mb-2">Knowing that a single-page app (SPA) like this one didn't require a complex infrastructure, I opted for Google's PaaS service, Firebase. Firebase offers me a comprehensive set of tools, such as Google Analytics, to monitor my site's information.</li>
+      <li>For CI/CD, I utilized Github Actions, which executes tests on my code using <a href="https://www.cypress.io/" class="underline text-blue-400">Cypress</a> end-to-end testing framework, installs necessary dependencies, and deploys my application to Firebase.</li>
     </ul>
       <div class="flex items-start mb-5">
         <div class="pr-4">
@@ -421,7 +425,7 @@
   </div>
 </article>
 
-<article class="select-none mx-4 mt-6 md:gap-8 md:grid md:grid-cols-3">
+<article id="streamline" class="select-none mx-4 mt-6 md:gap-8 md:grid md:grid-cols-3">
   <div>
       <div class="mx-auto flex items-center mb-6 space-x-4">
           <img class="w-12 h-12 rounded-full" src="assets/svgs/dolphin-svgrepo-com.svg" alt="">
@@ -431,6 +435,12 @@
       </div>
       <ul class="space-y-4 text-md text-gray-500 dark:text-gray-400">
         <li class="flex items-center">
+          <span
+            class="bg-gray-100 text-gray-900 text-xs font-medium inline-flex shadow-md items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
+            Released: 30/04/2023
+          </span>
+        </li>
+        <li class="flex items-center">
           <a href="https://github.com/jakeoliverlee" class="text-gray-500 hover:text-gray-900 dark:hover:text-white" target="_blank">
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" /></svg>
             <span class="sr-only">GitHub account</span>
@@ -439,13 +449,12 @@
         class="ml-2 bg-gray-100 text-gray-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
         v0.0.1
       </span>
-          <li class="flex items-center text-md">Tech stack:</li>
           <li class="flex items-center">
-            <img class="w-10 h-10 mr-5 inline-block  rounded-full" src="assets/svgs/icons8-python.svg" alt="Python" title="Python">
-            <img class="w-10 h-10 mr-5 inline-block  rounded-full" src="assets/svgs/streamlit.svg" alt="Streamlit" title="Streamlit">
-            <img class="w-10 h-10 mr-5 inline-block" src="assets/svgs/typescript-svgrepo-com (1).svg" alt="Typescript" title="Typescript">
-            <img class="w-10 h-10 mr-5 inline-block" src="assets/svgs/aws-icon-services.svg" alt="AWS" title="AWS">
-            <img class="w-10 h-10 mr-1.5 inline-block p-1 rounded-full" src="assets/svgs/terraform-icon-svgrepo-com.svg" alt="Terraform" title="Terraform" style="background-color: white;">
+            <img class="w-8 h-8 mr-5 inline-block  rounded-full" src="assets/svgs/icons8-python.svg" alt="Python" title="Python">
+            <img class="w-8 h-8 mr-5 inline-block  rounded-full" src="assets/svgs/streamlit.svg" alt="Streamlit" title="Streamlit">
+            <img class="w-8 h-8 mr-5 inline-block" src="assets/svgs/typescript-svgrepo-com (1).svg" alt="Typescript" title="Typescript">
+            <img class="w-8 h-8 mr-5 inline-block" src="assets/svgs/aws-icon-services.svg" alt="AWS" title="AWS">
+            <img class="w-8 h-8 mr-1.5 inline-block p-1 rounded-full" src="assets/svgs/terraform-icon-svgrepo-com.svg" alt="Terraform" title="Terraform" style="background-color: white;">
           </li>
       </ul>
   </div>
@@ -459,6 +468,7 @@
           </div>
       </div>
       <ul class="list-disc ml-6 mb-2 text-gray-500 dark:text-gray-400">
+
         <li>The flat was spotless, very comfortable, and the host was amazing. I highly recommend this accommodation for anyone visiting Brasov city centre. It's quite a while since we are no longer using hotel facilities but self contained places. And the main reason is poor cleanliness and staff not being trained properly. This place exceeded our expectation and will return for sure.</li>
       </ul>
       <ul class="list-di  sc ml-6 mb-5 text-gray-500 dark:text-gray-400">
@@ -471,7 +481,7 @@
 <div id="bottom-banner" tabindex="-1" class="fixed bottom-0 left-0 z-50 flex justify-between w-full p-4 border-t border-gray-200 bg-gray-50 dark:bg-zinc-900 dark:border-gray-600">
   <div class="flex items-center mx-auto">
       <p class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-          <span>Like what you see? <a href="https://github.com/jakeoliverlee/resume" target="_blank" rel="noopener noreferrer" class="flex items-center ml-0 text-sm font-medium text-blue-600 md:ml-1 md:inline-flex dark:text-blue-500 hover:underline">Star this repository <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="hover:fill-current bi bi-star ml-1 text-blue-600 dark:text-blue-500" viewBox="0 0 16 16"><path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.523-3.356c.329-.314.15-.888-.282-.95l-4.898-.696L8.465.792a.53.53 0 0 0-.93 0L5.354 5.12l-4.898.696c-.433.062-.61.636-.282.95l3.523 3.356-.83 4.73zm4.905-2.767l-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.564.564 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/></svg></a></span>
+          <span>This website is entirely open source |<a href="https://github.com/jakeoliverlee/resume" target="_blank" rel="noopener noreferrer" class="flex items-center ml-0 text-sm font-medium text-blue-600 md:ml-1 md:inline-flex dark:text-blue-500 hover:underline">Star this repository <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="hover:fill-current bi bi-star ml-1 text-blue-600 dark:text-blue-500" viewBox="0 0 16 16"><path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.523-3.356c.329-.314.15-.888-.282-.95l-4.898-.696L8.465.792a.53.53 0 0 0-.93 0L5.354 5.12l-4.898.696c-.433.062-.61.636-.282.95l3.523 3.356-.83 4.73zm4.905-2.767l-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.564.564 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/></svg></a></span>
       </p>
   </div>
   <div class="flex items-center">
@@ -507,29 +517,8 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
   <script defer src="index.js"></script>
-  <script>
-    Holder.addTheme('thumb', {
-      bg: '#55595c',
-      fg: '#eceeef',
-      text: 'Thumbnail'
-    });
-  </script>
   <script src="firebase/firebase_init.js"></script>
   <script src="scroll.js"></script>
   <script src="bottom_banner.js"></script>
-  <script>
-    const revealGraph = document.querySelector('.reveal iframe');
-
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          revealGraph.setAttribute('src', revealGraph.getAttribute('data-src'));
-          observer.unobserve(entry.target);
-        }
-      });
-    });
-
-    observer.observe(revealGraph);
-  </script>
   </body>
 </html>

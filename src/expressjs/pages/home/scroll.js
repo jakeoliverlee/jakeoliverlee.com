@@ -32,6 +32,4 @@ function reveal(){
   }
 }
 
-// Add a scroll event listener to the window
-window.addEventListener("scroll", handleScroll);
 
