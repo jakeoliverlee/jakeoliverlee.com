@@ -11,7 +11,7 @@ function loop() {
       j++;
     }
 
-    textDisplay.innerHTML = currentPhrase.join(''); // Update innerHTML after modifying currentPhrase
+    textDisplay.innerHTML = currentPhrase.join('');
 
     if (j <= phrases[i].length) {
       setTimeout(loop, 100); // Typing speed.
@@ -34,39 +34,15 @@ const observer = new IntersectionObserver((entries) => {
 observer.observe(textDisplay);
 
 
-// Function to apply the animation
-
-
-
-
-
-
-
-
-// const audio = new Audio("sounds/dark_light.wav");
-// $('#dark_mode_icon').on('click', () => {
-//   audio.play();
-// });
-
-
-// var themeToggleBtn = document.getElementById('theme-toggle');
-
-// themeToggleBtn.addEventListener('click', function() {
-
-//     // toggle icons inside button
-//     themeToggleDarkIcon.classList.toggle('hidden');
-//     themeToggleLightIcon.classList.toggle('hidden');
-
-    // if set via local storage previously
-    if (localStorage.getItem('color-theme')) {
-        if (localStorage.getItem('color-theme') === 'light') {
-            document.documentElement.classList.add('dark');
-            localStorage.setItem('color-theme', 'dark');
-        } else {
-            document.documentElement.classList.remove('dark');
-            localStorage.setItem('color-theme', 'light');
-        }
-    };
+if (localStorage.getItem('color-theme')) {
+    if (localStorage.getItem('color-theme') === 'light') {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('color-theme', 'dark');
+    } else {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('color-theme', 'light');
+    }
+};
 
 
 

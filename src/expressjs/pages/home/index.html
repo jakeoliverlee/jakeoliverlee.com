@@ -23,6 +23,14 @@
     <link href="output.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <style type="text/css">
+      #diagram {
+        width: 800px;
+        height: 400px;
+        border: 1px solid lightgray;
+      }
+    </style>
   </head>
 
   <!-- Header bar -->
@@ -46,16 +54,22 @@
           <a class="blog-header-logo text-dark" href="#">Jake Lee</a>
         </div>
         <div class="w-full sm:w-1/4 flex justify-end items-center">
-        <a type="button" title="Opens an email window" id="Contact_Me" class="relative animate-bounce hover:animate-none text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-4 py-2  dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 shadow-md" href="mailto:jakeoliverlee@gmail.com">Contact Me</a>
+        <a type="button" title="Opens an email window" id="Contact_Me" class="relative animate-bounce hover:animate-none
+         text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4
+          focus:ring-gray-200 font-medium rounded-lg text-sm px-4 py-2  dark:bg-gray-800 dark:text-white
+          dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 shadow-md" href="mailto:jakeoliverlee@gmail.com">Contact Me</a>
         </div>
         </div>
       </header>
     </div>
 
     <!-- Nav bar -->
-    <div id="navbar" class="py-1 nav-scroller mb-3 mt-1 ml-5 justify-start text-left rounded-full bg-white/90 dark:bg-zinc-900 ring-1 r dark:ring-zinc-300/20 text-sm font-medium shadow-md">      <nav class="px-3 nav d-flex justify-between">
+    <div id="navbar" class="py-1 nav-scroller mb-3 mt-1 ml-5 justify-start text-left rounded-full
+     bg-white/90 dark:bg-zinc-900 ring-1 r dark:ring-zinc-300/20 text-sm font-medium shadow-md">
+     <nav class="px-3 nav d-flex justify-between">
         <div class="flex-1">
-          <a id="work-experience-link" class="font-sans block px-3 py-2 text-muted hover:text-blue-700 dark:hover:text-blue-200" href="#projects">Projects</a>
+          <a id="work-experience-link" class="font-sans block px-3 py-2 text-muted
+           hover:text-blue-700 dark:hover:text-blue-200" href="#projects">Projects</a>
         </div>
         <div class="flex-1">
           <a id="projects-link" class="font-sans block px-3 py-2 text-muted hover:text-blue-700 dark:hover:text-blue-200" href="#work_experience">Work</a>
@@ -81,7 +95,8 @@
             </p>
           </div>
           <div class="flex-none mt-4 md:mt-0 ml-0 md:ml-16 mb-2">
-            <img id="handsome" class="mr-10 w-36 h-36 p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500 hidden lg:block transform hover:rotate-180 transition duration-500 ease-in-out" src="assets/images/about.jpg" alt="Bordered avatar">
+            <img id="handsome" class="mr-10 w-36 h-36 p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500
+             hidden lg:block transform hover:rotate-180 transition duration-500 ease-in-out" src="assets/images/about.jpg" alt="Bordered avatar">
           </div>
         </div>
         <hr class="my-2 sm:my-0 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8 opacity-50" />
@@ -260,7 +275,10 @@
                 <time class="reveal mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Aug 2019 - Nov 2020 · 1 yr 4 mos</time>
                 <h3 class="reveal text-xl font-semibold text-gray-900 dark:text-white">Shift Service Desk Agent</h3>
                 <p class="mb-2 text-xs font-normal text-gray-500 dark:text-gray-400">
-                <a href="assets/cv.pdf" class="reveal inline-flex items-center px-4 mt-6 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 shadow-md dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700">Download CV
+                <a href="assets/cv.pdf" class="reveal inline-flex items-center px-4 mt-6 py-2 text-sm font-medium text-gray-900
+                 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4
+                  focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 shadow-md dark:text-gray-400
+                   dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700">Download CV
                 <img class="w-6 h-6 ml-2 animate-bounce" fill="currentColor" src="assets/images/icons8-down-arrow-48.png"> </img></a>
             </li>
           </div>
@@ -296,7 +314,9 @@
           <img class="h-10 w-10 inline-block mr-2" src="assets/svgs/icons8-python.svg" alt="Python">
           <img class="h-10 w-10 inline-block mr-2 rounded-full" src="assets/svgs/aws-icon-services.svg" alt="AWS Services">
         </div>
-        <button type="button" href="#streamline" class="text-white animate-pulse bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2" onclick="goToPage()">
+        <button type="button" href="#streamline" class="text-white animate-pulse bg-gradient-to-r from-blue-500 via-blue-600
+         to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg
+          shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2" onclick="goToPage()">
           Read more
         </button>
       </div>
@@ -319,7 +339,9 @@
           <img class="h-10 w-10 inline-block mr-2 rounded-full" src="assets/svgs/react-javascript-js-framework-facebook-svgrepo-com.svg" alt="React">
           <img class="h-10 w-10 inline-block mr-2 rounded-full" src="assets/svgs/tailwind-css-icon.svg" alt="Tailwind">
         </div>
-        <button href="#resume_section" type="button" class="text-white animate-pulse hover:animate-none bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2" onclick="goToPage()">
+        <button href="#resume_section" type="button" class="text-white animate-pulse hover:animate-none bg-gradient-to-r
+         from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300
+          dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2" onclick="goToPage()">
           Read more
         </button>
         </a>
@@ -341,7 +363,9 @@
         <div class="flex w-full flex-items-center justify-center min-h-3">
           <img class="h-10 w-10 inline-block mr-2" src="assets/svgs/icons8-python.svg" alt="Python"> <!-- Move the img tag here -->
         </div>
-        <button type="button" class="text-white animate-pulse bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 " onclick="goToPage()">
+        <button type="button" class="text-white animate-pulse bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700
+         hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg
+          shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 " onclick="goToPage()">
           Read more
         </button>
         </a>
@@ -367,7 +391,13 @@
             </li>
           <li class="flex items-center">
             <a href="https://github.com/jakeoliverlee/resume" class="text-gray-500 hover:text-gray-900 dark:hover:text-white" target="_blank">
-              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" /></svg>
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477
+                 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483
+                  0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608
+                  1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951
+                   0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115
+                    2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566
+                     4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" /></svg>
               <span class="sr-only">GitHub account</span>
           </a>
             <span
@@ -391,8 +421,11 @@
           </div>
       </div>
       <ul class="list-disc ml-6 mb-8 text-gray-500 dark:text-gray-400">
-        <li class="mb-2">Provides me with an online presence and allows potential employers to view my skills in a centralized location, so they can more efficiently assess whether I am a good fit for the role or not.</li>
-        <li class="">Enables me to showcase my proficiency in designing and developing fully functional websites, using HTML, CSS, and JavaScript to create engaging user interfaces, as well as integrating non-relational databases such as MongoDB to manage dynamic content.</li>
+        <li class="mb-2">Provides me with an online presence and allows potential employers to
+           view my skills in a centralized location, so they can more efficiently assess whether I am a good fit for the role or not.</li>
+        <li class="">Enables me to showcase my proficiency in designing and developing fully
+          functional websites, using HTML, CSS, and JavaScript to create engaging user interfaces, as
+          well as integrating non-relational databases such as MongoDB to manage dynamic content.</li>
       </ul>
       <div class="mt-5 flex items-start mb-5">
         <div class="pr-4">
@@ -408,10 +441,13 @@
       </div>
     </div>
     <ul class="list-disc ml-6 mb-8 text-gray-500 dark:text-gray-400">
-      <li class="mb-2">The frontend for this project was written almost entirely in HTML and <a href="https://tailwindui.com/" class="underline text-blue-400">Tailwind CSS</a>, with a small amount of Javascript. I needed this project to be fully mobile-responsive as well as supporting Dark Mode/Light Mode - TailwindCSS made this very simple to achieve.</li>
+      <li class="mb-2">The frontend for this project was written almost entirely in HTML and <a href="https://tailwindui.com/" class="underline text-blue-400">Tailwind CSS</a>,
+        with a small amount of Javascript. I needed this project to be fully mobile-responsive as well as supporting Dark Mode/Light Mode - TailwindCSS made this very simple to achieve.</li>
       <li class="mb-2">The backend is written in NodeJS, based on the ExpressJS framework, which I used in my developer environment to spin up a locally hosted server.</li>
-      <li class="mb-2">Knowing that a single-page app (SPA) like this one didn't require a complex infrastructure, I opted for Google's PaaS service, Firebase. Firebase offers me a comprehensive set of tools, such as Google Analytics, to monitor my site's information.</li>
-      <li>For CI/CD, I utilized Github Actions, which executes tests on my code using <a href="https://www.cypress.io/" class="underline text-blue-400">Cypress</a> end-to-end testing framework, installs necessary dependencies, and deploys my application to Firebase.</li>
+      <li class="mb-2">Knowing that a single-page app (SPA) like this one didn't require a complex infrastructure, I opted for Google's PaaS service, Firebase.
+        Firebase offers me a comprehensive set of tools, such as Google Analytics, to monitor my site's information.</li>
+      <li>For CI/CD, I utilized Github Actions, which executes tests on my code using <a href="https://www.cypress.io/" class="underline text-blue-400">Cypress</a>
+        end-to-end testing framework, installs necessary dependencies, and deploys my application to Firebase.</li>
     </ul>
       <div class="flex items-start mb-5">
         <div class="pr-4">
@@ -444,10 +480,17 @@
         </li>
         <li class="flex items-center">
           <a href="https://github.com/jakeoliverlee" class="text-gray-500 hover:text-gray-900 dark:hover:text-white" target="_blank">
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" /></svg>
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425
+               2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608
+                1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0
+                 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688
+                  0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" /></svg>
             <span class="sr-only">GitHub account</span>
         </a>
-          <span
+        <span class="bg-gray-100 mx-1 text-gray-900 shadow-md text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
+          Amazon Inc.
+        </span>
+        <span
         class="ml-2 bg-gray-100 text-gray-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
         v0.0.1
       </span>
@@ -460,35 +503,102 @@
           </li>
       </ul>
   </div>
-  <div class="col-span-2 mt-6 md:mt-0">
-      <div class="flex items-start mb-5">
-          <div class="pr-4">
-              <footer>
-                  <p class="mb-2 text-sm text-gray-500 dark:text-gray-400">Released: <time datetime="2022-01-20 19:00">April 30, 2023</time></p>
-              </footer>
-              <h4 class="text-xl font-bold text-gray-900 dark:text-white">What problem did this solve?</h4>
-          </div>
-      </div>
-      <ul class="list-disc ml-6 mb-2 text-gray-500 dark:text-gray-400">
+  <div class="col-span-2 mt-6 my-8 md:mt-0">
+    <div class="flex items-start mb-5">
+        <div class="pr-4">
+            <h4 class="text-xl font-bold text-gray-900 dark:text-white">What problem did this solve?</h4>
+        </div>
+    </div>
+    <ul class="list-disc ml-6 mb-8 text-gray-500 dark:text-gray-400">
+      <li class="mb-2">
+          Streamline is an internal platform built entirely in Python that data centre staff interact with to speed up
+          various operational processes. Streamline can perform various tasks, the most popular being it's
+          crunching of ticket data, which previously done manually would take around 15-20 mins each day.
+          Streamline's ticket crunching algorithm meant that technicians no longer needed to manually count ticket numbers,
+          Streamline does this calculation automatically by leveraging Python's pandas libary
+          provides an approx <span class="font-bold">boost in time effiency of ~150% </span> compared to the
+          old way where we had to manually pull the data.
+      </li>
 
-        <li>The flat was spotless, very comfortable, and the host was amazing. I highly recommend this accommodation for anyone visiting Brasov city centre. It's quite a while since we are no longer using hotel facilities but self contained places. And the main reason is poor cleanliness and staff not being trained properly. This place exceeded our expectation and will return for sure.</li>
-      </ul>
-      <ul class="list-di  sc ml-6 mb-5 text-gray-500 dark:text-gray-400">
-        <li>It is obviously not the same build quality as those very expensive watches. But that is like comparing a Citroën to a Ferrari. This watch was well under £100! An absolute bargain.</li>
-      </ul>
+      <li class="">
+        Streamline's release inspired me to create a community for data centre staff within AWS who have a passion for development.
+        These individuals are natural problem-solvers and want to utilize their development skills to increase the efficiency of operating data centres.
+        By doing so, they aim to provide the best experience for not only their data centre colleagues but also for AWS stakeholders and customers.
+      </li>
+    </ul>
+    <div class="mt-5 flex items-start mb-5">
+      <div class="pr-4">
+          <h4 class="text-xl font-bold text-gray-900 dark:text-white">Who are my user base?</h4>
+      </div>
   </div>
+  <ul class="list-disc ml-6 mb-8 text-gray-500 dark:text-gray-400">
+    <li>Data Centre staff in AWS London Data Centres</li>
+  </ul>
+  <div class="flex items-start mb-5">
+    <div class="pr-4">
+        <h4 class="text-xl font-bold text-gray-900 dark:text-white">What are some of the technical decisions I made?</h4>
+    </div>
+  </div>
+  <ul class="list-disc ml-6 mb-8 text-gray-500 dark:text-gray-400">
+    <li class="mb-2">
+      Streamline is a web application developed entirely in Python; based on the <a href="https://streamlit.io/" class="underline text-blue-400">Streamlit</a> web framework. Streamlit
+      abstracts a lot of the complexities of the backend from me so I can focus on writing the Python code that makes up the application.
+      Under the hood, streamlit uses WebSockets to enable real-time updates and low latency, Streamlit can also manage widget states on the frontend and syncs the states
+      automatically to the backend.
+    </li>
+
+    <li class="mb-2">
+      Within Streamline, there is a ticket-data crunching service which takes in a CSV as input and returns sorted data in a table format as output. I am achieving this using Python's
+      <span class="font-bold">Pandas library</span>. Streamline uses regex under the hood to check the validity of user input, user uploads csv, pandas operation is performed on the data in the CSV,
+      data is outputted to the frontend in table format for the user to see.
+    </li>
+
+    <li class="mb-2">
+      Streamline is a fully-redundant, secure, and performant web application hosted entirely using AWS services. It is hosted on auto-scaled EC2 instances spread across three AZs and served by an Application Load Balancer (ALB).
+      Streamline's unique domain name uses Route53 for fast and reliable DNS resolution, and CloudWatch for monitoring the EC2 instances.
+    </li>
+    <li>
+      For CI/CD, I am also using AWS services, namely CodePipeline, CodeBuild, and AWS's code repository, CodeCommit. I am using an S3 bucket to store a copy of my git repository which my ec2 instances read from when I make a commit
+      to my main branch.
+    </li>
+    <li>
+      Streamline utilizes IaC through AWS CDK, which I wrote in TypeScript.
+  </ul>
+    <div class="flex items-start mb-5">
+      <div class="pr-4">
+          <h4 class="text-xl font-bold text-gray-900 dark:text-white">What was the outcome and what did I learn?</h4>
+      </div>
+  </div>
+  <ul class="list-disc ml-6 mb-4 text-gray-500 dark:text-gray-400">
+    <li>This project taught me a lot about UI/UX design and creating an engaging user experience, which was a new skill for me considering my background in backend-focused tech.</li>
+    <li>I learned about the simplicity of creating a CI/CD pipeline using Google's Firebase and Github Actions.</li>
+    <li>I learned how to test frontend code, specifically using Cypress for component and E2E testing.</li>
+    <li>Integrating dark and light mode compatibility was extremely simple with Tailwind, allowing my project to be accessible for those during the day as well as at night!</li>
+  </ul>
+</div>
 </article>
 
 
 <div id="bottom-banner" tabindex="-1" class="fixed bottom-0 left-0 z-50 flex justify-between w-full p-4 border-t border-gray-200 bg-gray-50 dark:bg-zinc-900 dark:border-gray-600">
   <div class="flex items-center mx-auto">
       <p class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-          <span>This website is entirely open source |<a href="https://github.com/jakeoliverlee/resume" target="_blank" rel="noopener noreferrer" class="flex items-center ml-0 text-sm font-medium text-blue-600 md:ml-1 md:inline-flex dark:text-blue-500 hover:underline">Star this repository <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="hover:fill-current bi bi-star ml-1 text-blue-600 dark:text-blue-500" viewBox="0 0 16 16"><path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.523-3.356c.329-.314.15-.888-.282-.95l-4.898-.696L8.465.792a.53.53 0 0 0-.93 0L5.354 5.12l-4.898.696c-.433.062-.61.636-.282.95l3.523 3.356-.83 4.73zm4.905-2.767l-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.564.564 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/></svg></a></span>
+          <span>This website is entirely open source |<a href="https://github.com/jakeoliverlee/resume"
+             target="_blank" rel="noopener noreferrer" class="flex items-center ml-0 text-sm font-medium
+              text-blue-600 md:ml-1 md:inline-flex dark:text-blue-500 hover:underline">
+              Star this repository <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+               class="hover:fill-current bi bi-star ml-1 text-blue-600 dark:text-blue-500" viewBox="0 0 16 16">
+               <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73
+                3.523-3.356c.329-.314.15-.888-.282-.95l-4.898-.696L8.465.792a.53.53 0 0 0-.93 0L5.354 5.12l-4.898.696c-.433.062-.61.636-.282.95l3.523
+                 3.356-.83 4.73zm4.905-2.767l-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0
+                  .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.564.564 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/></svg></a></span>
       </p>
   </div>
   <div class="flex items-center">
-      <button id="close_banner" data-dismiss-target="#bottom-banner" type="button" class="flex-shrink-0 inline-flex justify-center items-center text-gray-400 hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 dark:hover:bg-gray-600 dark:hover:text-white">
-          <svg  aria-hidden="true" class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+      <button id="close_banner" data-dismiss-target="#bottom-banner" type="button" class="flex-shrink-0 inline-flex justify-center
+       items-center text-gray-400 hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 dark:hover:bg-gray-600 dark:hover:text-white">
+          <svg  aria-hidden="true" class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293
+             4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
           <span class="sr-only">Close banner</span>
       </button>
   </div>
@@ -508,7 +618,12 @@
         <div class="text-sm text-gray-500 sm:text-center dark:text-gray-400"></div>
         <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
           <a href="https://github.com/jakeoliverlee" class="text-gray-500 hover:text-gray-900 dark:hover:text-white" target="_blank">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" /></svg>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484
+               2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608
+                1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951
+                 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115
+                  2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678
+                   1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" /></svg>
             <span class="sr-only">GitHub account</span>
         </a>
         </div>
@@ -517,6 +632,7 @@
 </footer>
   <!-- Placed at the end of the document so the pages load faster -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="diagram/streamline.js"></script>
   <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
   <script defer src="index.js"></script>
   <script src="firebase/firebase_init.js"></script>
