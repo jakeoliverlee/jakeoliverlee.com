@@ -43,7 +43,7 @@
         <div class="w-full sm:w-1/4 flex justify-end items-center">
           <button id="theme-toggle" type="button" class="mx-4 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
             <svg id="theme-toggle-dark-icon" class="hidden mr-4 w-7 h-7" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-            <svg id="theme-toggle-light-icon" class="hidden mr-4 w-7 h-7" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+            <svg id="theme-toggle-light-icon" class="hidden mr-4 w- h-7" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
         </button>
         <a type="button" title="Opens an email window" id="Contact_Me" class="relative animate-bounce hover:animate-none
          text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4
@@ -304,11 +304,11 @@
               <img class="h-10 w-10 inline-block mr-2" src="assets/svgs/icons8-python.svg" alt="Python">
               <img class="h-10 w-10 inline-block mr-2 rounded-full" src="assets/svgs/aws-icon-services.svg" alt="AWS Services">
           </div>
-          <button type="button" href="#streamline" class="text-white animate-pulse bg-gradient-to-r from-blue-500 via-blue-600
+          <a type="button" href="#streamline" class="text-white animate-pulse bg-gradient-to-r from-blue-500 via-blue-600
           to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg
-          shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2" onclick="goToPage()">
+          shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
               Read more
-          </button>
+        </a>
       </div>
 
 
@@ -331,13 +331,13 @@
           <img class="h-10 w-10 inline-block mr-2 rounded-full" src="assets/svgs/react-javascript-js-framework-facebook-svgrepo-com.svg" alt="React">
           <img class="h-10 w-10 inline-block mr-2 rounded-full" src="assets/svgs/tailwind-css-icon.svg" alt="Tailwind">
         </div>
-        <button href="#resume_section" type="button" class="text-white animate-pulse hover:animate-none bg-gradient-to-r
+        <a href="#resume_section" type="button" class="text-white animate-pulse hover:animate-none bg-gradient-to-r
          from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300
           dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2" onclick="goToPage()">
           Read more
-        </button>
         </a>
-      </div>
+      </a>
+    </div>
 
 
 
@@ -455,8 +455,8 @@
   </div>
 </article>
 
-<article id="streamline" class="select-none mx-4 mt-6 md:gap-8 md:grid md:grid-cols-3">
-  <div>
+<article class="select-none mx-4 mt-6 md:gap-8 md:grid md:grid-cols-3">
+  <div id="streamline">
       <div class="mx-auto flex items-center mb-6 space-x-4">
           <img class="w-12 h-12 rounded-full" src="assets/svgs/dolphin-svgrepo-com.svg" alt="">
           <div class="space-y-1 font-medium text-gray-900 dark:text-white">
