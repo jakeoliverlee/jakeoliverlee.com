@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "firebase deploy",
-    "cypress:open": "cypress open"
+    "cypress:open": "cypress open",
+    "build:css": "cross-env NODE_ENV=production postcss src/expressjs/pages/home/output.css -o src/expressjs/pages/home/tailwind.css"
   },
   "repository": {
     "type": "git",
@@ -29,7 +30,10 @@
     "react-typed": "^1.2.0"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
+    "cssnano": "^6.0.1",
     "cypress": "^12.11.0",
+    "postcss-cli": "^10.1.0",
     "tailwindcss": "^3.3.1"
   }
 }

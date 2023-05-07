@@ -1,13 +1,12 @@
 module.exports = {
-  darkMode: 'class',
-  prefix: '',
-  content: [".src/expressjs/pages/home/**/*.{html,js}"],
+  purge: [
+    "./src/expressjs/pages/home/**/*.html",
+    "./src/expressjs/pages/home/**/*.js",
+  ],
+  darkMode: "class",
+  prefix: "",
   theme: {
     extend: {},
   },
-  plugins: [
-    require('flowbite/plugin'),
-    require("daisyui")
-],
-}
-
+  plugins: [require("flowbite/plugin"), require("daisyui")],
+};
