@@ -1,18 +1,13 @@
-const closeBanner = document.getElementById('close_banner');
-const bottomBanner = document.getElementById('bottom-banner');
+document.addEventListener("DOMContentLoaded", () => {
+  const handsomeImage = document.getElementById("handsome");
 
-closeBanner.addEventListener('click', () => {
-  bottomBanner.classList.add('hidden');
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-  const handsomeImage = document.getElementById('handsome');
-
-  window.addEventListener('scroll', () => {
+  window.addEventListener("scroll", () => {
     const scrollTop = window.scrollY;
     const scale = Math.max(0.5, 1 - scrollTop / 1000);
 
-    handsomeImage.style.transform = `scale(${scale}) rotate(${scrollTop / 20}deg)`;
+    handsomeImage.style.transform = `scale(${scale}) rotate(${
+      scrollTop / 20
+    }deg)`;
   });
 });
 
