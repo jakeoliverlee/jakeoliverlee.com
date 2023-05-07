@@ -3,7 +3,7 @@ module.exports = {
     "./src/expressjs/pages/home/**/*.html",
     "./src/expressjs/pages/home/**/*.js",
   ],
-  darkMode: "media",
+  darkMode: "class",
   prefix: "",
   theme: {
     extend: {},
