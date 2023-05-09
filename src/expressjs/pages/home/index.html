@@ -301,8 +301,11 @@
               Streamline is an Amazon-internal web application built entirely using Python, based on the Streamlit framework.
           </p>
           <div class="flex w-full flex-items-center justify-center">
-              <img class="h-10 w-10 inline-block mr-2" src="assets/svgs/icons8-python.svg" alt="Python">
-              <img class="h-10 w-10 inline-block mr-2 rounded-full" src="assets/svgs/aws-icon-services.svg" alt="AWS Services">
+            <img class="w-8 h-8 mr-5 inline-block rounded-full " src="assets/svgs/icons8-python.svg" alt="Python" title="Python">
+            <img class="w-8 h-8 mr-5 inline-block rounded-full " src="assets/svgs/streamlit.svg" alt="Streamlit" title="Streamlit">
+            <img class="w-8 h-8 mr-5 inline-block" src="assets/svgs/typescript-svgrepo-com (1).svg" alt="Typescript" title="Typescript">
+            <img class="w-8 h-8 mr-5 inline-block" src="assets/svgs/aws-icon-services.svg" alt="AWS" title="AWS">
+            <img class="w-8 h-8 mr-1.5 inline-block p-1 rounded-full" src="assets/svgs/terraform-icon-svgrepo-com.svg" alt="Terraform" title="Terraform" style="background-color: white;">
           </div>
           <a type="button" href="#streamline" class="text-white animate-pulse bg-gradient-to-r from-blue-500 via-blue-600
           to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg
@@ -532,31 +535,31 @@
     <li class="mb-2">
       Streamline is a web application developed entirely in Python; based on the
        <a href="https://streamlit.io/" class="underline text-blue-400">Streamlit</a> web framework. Streamlit
-      abstracts a lot of the complexities of the backend from me so I can focus on writing
-       the Python code that makes up the application.
+      abstracts a lot of the complexities of the backend which enabled us to focus on writing
+      the Python code that powers Streamline.
       Under the hood, streamlit uses WebSockets to enable real-time updates and low latency,
-       Streamlit can also manage widget states on the frontend and syncs the states
+      Streamlit can also manage widget states on the frontend and syncs the states
       automatically to the backend.
     </li>
 
     <li class="mb-2">
       Within Streamline, there is a ticket-data crunching service which takes in a CSV as input and returns sorted data in a table format as output. I am achieving this using Python's
-      <span class="font-bold">Pandas library</span>. Streamline uses regex under the hood to check the validity of user input, user uploads csv, pandas operation is performed on the data in the CSV,
+      <span class="font-bold">Pandas library</span>. Streamline uses <span class="font-bold">regex</span> under the hood to check the validity of user input, user uploads csv, pandas operation is performed on the data in the CSV,
       data is outputted to the frontend in table format for the user to see.
     </li>
 
     <li class="mb-2">
-      Streamline is a fully-redundant, secure, and performant web application hosted entirely using AWS services.
-       It is hosted on auto-scaled EC2 instances spread across three AZs and served by an Application Load Balancer (ALB).
+    <span class="font-bold">Streamline is a fully-redundant, secure, and performant web application</span> hosted entirely using AWS services.
+       It is being hosted on auto-scaled EC2 instances, spread across three AZs, served by an Application Load Balancer (ALB).
       Streamline's unique domain name uses Route53 for fast and reliable DNS resolution, and CloudWatch for monitoring the EC2 instances.
     </li>
     <li>
-      For CI/CD, I am also using AWS services, namely CodePipeline, CodeBuild, and AWS's code repository, CodeCommit.
-       I am using an S3 bucket to store a copy of my git repository which my ec2 instances read from when I make a commit
+      For CI/CD Streamline is also utilizing AWS services, namely CodePipeline, CodeBuild, and AWS's code repository, CodeCommit.
+      We use an S3 bucket to store a copy of our git repository which the ec2 instances read from.
       to my main branch.
     </li>
     <li>
-      Streamline utilizes IaC through AWS CDK, which I wrote in TypeScript.
+      Streamline utilizes IaC through AWS CDK, which is wrote in TypeScript.
   </ul>
     <div class="flex items-start mb-5">
       <div class="pr-4">
