@@ -7,7 +7,6 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-
     <title>Jake Lee | Resume</title>
     <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
     <script src="https://kit.fontawesome.com/85539b08a7.js" crossorigin="anonymous"></script>
@@ -16,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
     <link href="css/tailwind.css" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link id="favicon" rel="icon" type="image/x-icon" href="favicon-light.ico">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   </head>
 
@@ -41,9 +40,9 @@
           <a class="blog-header-logo text-gray-900 dark:text-white text-dark" href="#">Jake Lee</a>
         </div>
         <div class="w-full sm:w-1/4 flex justify-end items-center">
-          <button id="theme-toggle" type="button" class="mx-4 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
-            <svg id="theme-toggle-dark-icon" class="hidden mr-4 w-7 h-7" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-            <svg id="theme-toggle-light-icon" class="hidden mr-4 w- h-7" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+        <button id="theme-toggle" onclick="updateFavicon()" type="button" class="mx-4 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 transition duration-200">
+            <svg id="theme-toggle-dark-icon" class="hidden  w-7 h-7" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+            <svg id="theme-toggle-light-icon" class="hidden  w-7 h-7" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
         </button>
         <a type="button" title="Opens an email window" id="Contact_Me" class="relative animate-bounce hover:animate-none
          text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4
@@ -66,7 +65,7 @@
           <a id="projects-link" class="font-sans block px-3 py-2 text-muted text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-200" href="#work_experience">Work</a>
         </div>
         <div class="flex-1">
-          <a id="recognition-link" class="font-sans block px-3 py-2 text-muted text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-200" href="#">Gadgets</a>
+          <a id="recognition-link" class="font-sans block px-3 py-2 text-muted text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-200" href="#contact">Contact</a>
         </div>
       </nav>
     </div>
@@ -80,9 +79,9 @@
           <div class="flex-1 mx-auto text-center md:text-left">
             <h1 class="text-gray-900 dark:text-white text-3xl md:text-4xl font-bold pointer-events-none">About me</h1>
             <p class="mt-6 text-base text-zinc-600 dark:text-zinc-400 max-w-4xl sm:mb-4 sm:mx-auto mx-auto">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Pellentesque Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Pellentesque Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Welcome to my personal website! On this site, you will learn a little about my professional life, including what I do for work,
+              some of the things I have built in my spare time, and some of my interests. I enjoy cycling when I'm out of the house and am also
+              a rugby fan. I'm always looking for something new to build, so if you have any ideas, feel free to reach out to me via email by pressing the 'Contact Me' button.
             </p>
           </div>
           <div class="flex-none mt-4 md:mt-0 ml-0 md:ml-16 mb-2">
@@ -203,10 +202,10 @@
       <section class="bg-white dark:bg-zinc-900">
         <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
             <div class="mr-auto place-self-center lg:col-span-7">
-            <h2 id="type" class="reveal text-gray-900 dark:text-white text-center md:text-left max-w-2xl mb-6 text-4xl font-extrabold tracking-tight leading-none md:text-4xl xl:text-5xl dark:text-white"></h2>
+            <h2 id="type" class=" text-gray-900 text-center md:text-left max-w-2xl mb-6 text-4xl font-extrabold tracking-tight leading-none md:text-4xl xl:text-5xl dark:text-white"></h2>
             </div>
             <div class="lg:mt-0 lg:col-span-5 lg:flex">
-              <codersrank-skills-chart class="reveal m-2 mt-2"
+              <codersrank-skills-chart class=" m-2 mt-2"
                 username="jakeoliverlee"
                 labels
                 legend
@@ -336,7 +335,7 @@
         </div>
         <a href="#resume_section" type="button" class="text-white animate-pulse hover:animate-none bg-gradient-to-r
          from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300
-          dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2" onclick="goToPage()">
+          dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
           Read more
         </a>
       </a>
@@ -581,31 +580,84 @@
   </ul>
 </div>
 </article>
+<hr class="my-2 sm:my-2 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8 opacity-50" />
+<div>
+      <h1 class="mt-4 text-2xl text-black font-bold dark:text-white">Contact</h1>
+      <p class="mt-4 text-black dark:text-white">Feel free to reach out to me! I check Discord most often, but any contact
+      method below works.
+  </p>
 
-<div id="bottom-banner" tabindex="-1" class="fixed bottom-0 left-0 z-50 flex justify-between w-full p-4 border-t border-gray-200 bg-gray-50 dark:bg-zinc-900 dark:border-gray-600">
-  <div class="flex items-center mx-auto">
-      <p class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-          <span>This website is entirely open source |<a href="https://github.com/jakeoliverlee/resume"
-             target="_blank" rel="noopener noreferrer" class="flex items-center ml-0 text-sm font-medium
-              text-blue-600 md:ml-1 md:inline-flex dark:text-blue-500 hover:underline">
-              Star this repository <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-               class="hover:fill-current bi bi-star ml-1 text-blue-600 dark:text-blue-500" viewBox="0 0 16 16">
-               <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73
-                3.523-3.356c.329-.314.15-.888-.282-.95l-4.898-.696L8.465.792a.53.53 0 0 0-.93 0L5.354 5.12l-4.898.696c-.433.062-.61.636-.282.95l3.523
-                 3.356-.83 4.73zm4.905-2.767l-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0
-                  .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.564.564 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/></svg></a></span>
-      </p>
-  </div>
-  <div class="flex items-center">
-      <button id="close_banner" data-dismiss-target="#bottom-banner" type="button" class="flex-shrink-0 inline-flex justify-center
-       items-center text-gray-400 hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 dark:hover:bg-gray-600 dark:hover:text-white">
-          <svg  aria-hidden="true" class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293
-             4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-          <span class="sr-only">Close banner</span>
-      </button>
-  </div>
+  <div id="contact" class="grid grid-cols-1 mt-12 text-center text-zinc-900 dark:text-white sm:mt-16 gap-x-20 gap-y-12 sm:grid-cols-2 lg:grid-cols-2 justify-center">
+    <a href="#" class="flex items-center ml-2 max-w-xl p-6  border border-gray-200 rounded-lg shadow  dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 hover:scale-105 transform ease-in-out duration-300">
+      <div class="flex items-center justify-center w-full m-4">
+        <svg xmlns="http://www.w3.org/2000/svg" class="toggleIconDark hidden mr-2 h-7 w-7 text-white fill-current" viewBox="0 0 64 64" id="email">
+          <path fill="#fff" d="M53.42 53.32H10.58a8.51 8.51 0 0 1-8.5-8.5V19.18a8.51 8.51 0 0 1 8.5-8.5h42.84a8.51 8.51 0 0 1 8.5 8.5v25.64a8.51 8.51 0 0 1-8.5 8.5ZM10.58 13.68a5.5 5.5 0 0 0-5.5 5.5v25.64a5.5 5.5 0 0 0 5.5 5.5h42.84a5.5 5.5 0 0 0 5.5-5.5V19.18a5.5 5.5 0 0 0-5.5-5.5Z"></path>
+          <path fill="#fff" d="M32 38.08a8.51 8.51 0 0 1-5.13-1.71L3.52 18.71a1.5 1.5 0 1 1 1.81-2.39L28.68 34a5.55 5.55 0 0 0 6.64 0l23.35-17.68a1.5 1.5 0 1 1 1.81 2.39L37.13 36.37A8.51 8.51 0 0 1 32 38.08Z"></path>
+          <path fill="#fff" d="M4.17 49.14a1.5 1.5 0 0 1-1-2.62l18.4-16.41a1.5 1.5 0 0 1 2 2.24L5.17 48.76a1.46 1.46 0 0 1-1 .38zm55.66 0a1.46 1.46 0 0 1-1-.38l-18.4-16.41a1.5 1.5 0 1 1 2-2.24l18.39 16.41a1.5 1.5 0 0 1-1 2.62z"></path>
+        </svg>
+        <svg class="toggleIconLight hidden mr-2 h-7 w-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="email"><path fill="#222" d="M53.42 53.32H10.58a8.51 8.51 0 0 1-8.5-8.5V19.18a8.51 8.51 0 0 1 8.5-8.5h42.84a8.51 8.51 0 0 1 8.5 8.5v25.64a8.51 8.51 0 0 1-8.5 8.5ZM10.58 13.68a5.5 5.5 0 0 0-5.5 5.5v25.64a5.5 5.5 0 0 0 5.5 5.5h42.84a5.5 5.5 0 0 0 5.5-5.5V19.18a5.5 5.5 0 0 0-5.5-5.5Z"></path><path fill="#222" d="M32 38.08a8.51 8.51 0 0 1-5.13-1.71L3.52 18.71a1.5 1.5 0 1 1 1.81-2.39L28.68 34a5.55 5.55 0 0 0 6.64 0l23.35-17.68a1.5 1.5 0 1 1 1.81 2.39L37.13 36.37A8.51 8.51 0 0 1 32 38.08Z"></path><path fill="#222" d="M4.17 49.14a1.5 1.5 0 0 1-1-2.62l18.4-16.41a1.5 1.5 0 0 1 2 2.24L5.17 48.76a1.46 1.46 0 0 1-1 .38zm55.66 0a1.46 1.46 0 0 1-1-.38l-18.4-16.41a1.5 1.5 0 1 1 2-2.24l18.39 16.41a1.5 1.5 0 0 1-1 2.62z"></path></svg>
+        <span class="text-zinc-900 dark:text-white select-none font-bold">Send me an email!</span>
+      </div>
+    </a>
+
+    <a href="#" class="flex items-center ml-2 max-w-xl p-6 border border-gray-200 rounded-lg shadow  dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 hover:scale-105 transform ease-in-out duration-300">
+      <div class="flex items-center justify-center w-full m-4">
+        <svg class="mr-2 h-7 w-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484
+          2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608
+           1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951
+            0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115
+             2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678
+              1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" /></svg>
+        <span class="text-zinc-900 dark:text-white select-none font-bold">@jakeoliverlee</span>
+      </div>
+    </a>
+    <a href="#" class="flex items-center ml-2 max-w-xl p-6 bg-yellow-200 border border-gray-200 rounded-lg shadow  dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 hover:scale-105 transform ease-in-out duration-300">
+      <div class="flex items-center justify-center w-full m-4">
+        <svg xmlns="http://www.w3.org/2000/svg" class="toggleIconLight hidden mr-2 h-7 w-7" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" class="toggleIconDark hidden mr-2 h-7 w-7" viewBox="0 0 24 24">
+          <path fill="#fff" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+        </svg>
+        <span class="text-zinc-900 dark:text-white select-none font-bold">Connect with me!</span>
+      </div>
+    </a>
+    <a href="#" class="flex items-center ml-2 max-w-xl p-6 bg-yellow-200 border border-gray-200 rounded-lg shadow  dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 hover:scale-105 transform ease-in-out duration-300">
+      <div class="flex items-center justify-center w-full m-4">
+        <svg id="themeToggleDarkEmailIcon" xmlns="http://www.w3.org/2000/svg" class="hidden mr-2 h-7 w-7 text-white fill-current" viewBox="0 0 64 64" id="email">
+          <path fill="#fff" d="M53.42 53.32H10.58a8.51 8.51 0 0 1-8.5-8.5V19.18a8.51 8.51 0 0 1 8.5-8.5h42.84a8.51 8.51 0 0 1 8.5 8.5v25.64a8.51 8.51 0 0 1-8.5 8.5ZM10.58 13.68a5.5 5.5 0 0 0-5.5 5.5v25.64a5.5 5.5 0 0 0 5.5 5.5h42.84a5.5 5.5 0 0 0 5.5-5.5V19.18a5.5 5.5 0 0 0-5.5-5.5Z"></path>
+          <path fill="#fff" d="M32 38.08a8.51 8.51 0 0 1-5.13-1.71L3.52 18.71a1.5 1.5 0 1 1 1.81-2.39L28.68 34a5.55 5.55 0 0 0 6.64 0l23.35-17.68a1.5 1.5 0 1 1 1.81 2.39L37.13 36.37A8.51 8.51 0 0 1 32 38.08Z"></path>
+          <path fill="#fff" d="M4.17 49.14a1.5 1.5 0 0 1-1-2.62l18.4-16.41a1.5 1.5 0 0 1 2 2.24L5.17 48.76a1.46 1.46 0 0 1-1 .38zm55.66 0a1.46 1.46 0 0 1-1-.38l-18.4-16.41a1.5 1.5 0 1 1 2-2.24l18.39 16.41a1.5 1.5 0 0 1-1 2.62z"></path>
+        </svg>
+        <svg id="themeToggleLightEmailIcon" class="hidden mr-2 h-7 w-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="email"><path fill="#222" d="M53.42 53.32H10.58a8.51 8.51 0 0 1-8.5-8.5V19.18a8.51 8.51 0 0 1 8.5-8.5h42.84a8.51 8.51 0 0 1 8.5 8.5v25.64a8.51 8.51 0 0 1-8.5 8.5ZM10.58 13.68a5.5 5.5 0 0 0-5.5 5.5v25.64a5.5 5.5 0 0 0 5.5 5.5h42.84a5.5 5.5 0 0 0 5.5-5.5V19.18a5.5 5.5 0 0 0-5.5-5.5Z"></path><path fill="#222" d="M32 38.08a8.51 8.51 0 0 1-5.13-1.71L3.52 18.71a1.5 1.5 0 1 1 1.81-2.39L28.68 34a5.55 5.55 0 0 0 6.64 0l23.35-17.68a1.5 1.5 0 1 1 1.81 2.39L37.13 36.37A8.51 8.51 0 0 1 32 38.08Z"></path><path fill="#222" d="M4.17 49.14a1.5 1.5 0 0 1-1-2.62l18.4-16.41a1.5 1.5 0 0 1 2 2.24L5.17 48.76a1.46 1.46 0 0 1-1 .38zm55.66 0a1.46 1.46 0 0 1-1-.38l-18.4-16.41a1.5 1.5 0 1 1 2-2.24l18.39 16.41a1.5 1.5 0 0 1-1 2.62z"></path></svg>
+        <span class="text-zinc-900 dark:text-white select-none font-bold">Send me an email!</span>
+      </div>
+    </a>
 </div>
+
+
+  <div id="bottom-banner" tabindex="-1" class="fixed bottom-0 left-0 z-50 flex justify-between w-full p-4 border-t border-gray-200 bg-gray-50 dark:bg-zinc-900 dark:border-gray-600">
+    <div class="flex items-center mx-auto">
+        <p class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
+            <span>This website is entirely open source |<a href="https://github.com/jakeoliverlee/resume"
+               target="_blank" rel="noopener noreferrer" class="flex items-center ml-0 text-sm font-medium
+                text-blue-600 md:ml-1 md:inline-flex dark:text-blue-500 hover:underline">
+                check it out! <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                 class="hover:fill-current bi bi-star ml-1 text-blue-600 dark:text-blue-500" viewBox="0 0 16 16">
+                 <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73
+                  3.523-3.356c.329-.314.15-.888-.282-.95l-4.898-.696L8.465.792a.53.53 0 0 0-.93 0L5.354 5.12l-4.898.696c-.433.062-.61.636-.282.95l3.523
+                   3.356-.83 4.73zm4.905-2.767l-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0
+                    .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.564.564 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/></svg></a></span>
+        </p>
+    </div>
+    <div class="flex items-center">
+        <button id="close_banner" data-dismiss-target="#bottom-banner" type="button" class="flex-shrink-0 inline-flex justify-center
+         items-center text-gray-400 hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 dark:hover:bg-gray-600 dark:hover:text-white">
+            <svg  aria-hidden="true" class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293
+               4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+            <span class="sr-only">Close banner</span>
+        </button>
+    </div>
+  </div>
 
 <!-- Footer section -->
 <footer class="bg-white dark:bg-zinc-900 select-none">
@@ -634,37 +686,11 @@
   </div>
 </footer>
   <!-- Placed at the end of the document so the pages load faster -->
-  <script rel="preload" src="dark_mode.js"></script>
+  <script rel="preload" src="scripts/dark_mode.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-  <script defer src="index.js"></script>
-  <script src="scroll.js"></script>
-  <script src="bottom_banner.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const animatedElements = document.querySelectorAll("[data-animate]");
-
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("visible");
-              observer.unobserve(entry.target);
-            }
-          });
-        },
-        {
-          threshold: 0.5,
-        }
-      );
-
-      animatedElements.forEach((element) => {
-        const delay = element.getAttribute("data-delay");
-        element.style.transitionDelay = delay;
-        element.classList.add("animate");
-        observer.observe(element);
-      });
-    });
-  </script>
+  <script defer src="scripts/index.js"></script>
+  <script src="scripts/scroll.js"></script>
+  <script src="scripts/bottom_banner.js"></script>
 </body>
 </html>
