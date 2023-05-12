@@ -1,7 +1,7 @@
 module.exports = {
   purge: [
     "./src/expressjs/pages/home/**/*.html",
-    "./src/expressjs/pages/home/**/*.js",
+    "./src/expressjs/pages/home/scripts/**/*.js",
   ],
   darkMode: "class",
   prefix: "",

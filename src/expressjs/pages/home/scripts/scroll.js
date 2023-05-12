@@ -26,3 +26,28 @@ function reveal() {
     }
   }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const animatedElements = document.querySelectorAll("[data-animate]");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.5,
+    }
+  );
+
+  animatedElements.forEach((element) => {
+    const delay = element.getAttribute("data-delay");
+    element.style.transitionDelay = delay;
+    element.classList.add("animate");
+    observer.observe(element);
+  });
+});
