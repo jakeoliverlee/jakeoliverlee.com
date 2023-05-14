@@ -6,8 +6,8 @@
   "scripts": {
     "build": "firebase deploy",
     "cypress:open": "cypress open",
-    "test": "postcss input.css -o src/expressjs/pages/home/css/newtailwind.css",
-    "build:css": "cross-env NODE_ENV=production postcss src/expressjs/pages/home/css/tailwind.css -o src/expressjs/pages/home/css/newtailwind.css"
+    "build:css": "postcss input.css -o src/pages/home/css/newtailwind.css",
+    "build:css:prod": "cross-env NODE_ENV=production postcss src/pages/home/css/tailwind.css -o src/pages/home/css/index.css"
   },
   "repository": {
     "type": "git",
