@@ -1,9 +1,5 @@
 const express = require("express");
-const bodyParser = require("body-parser");
-const https = require("https");
-const mongoose = require("mongoose");
 const cors = require("cors");
-const fs = require("fs");
 const firebaseConfig = {
   apiKey: "AIzaSyB8jdkFimL95M8rG-lfXosmKTxDugWM7m4",
   authDomain: "jakeoliverlee-main.firebaseapp.com",
@@ -14,6 +10,12 @@ const firebaseConfig = {
   messagingSenderId: "618141223590",
   appId: "1:618141223590:web:366d1923d96092621e4267",
 };
+
+import firebase from "firebase/app";
+import "firebase/firestore";
+
+firebase.initializeApp(firebaseConfig);
+const firestore = firebase.firestore();
 
 const app = express();
 
