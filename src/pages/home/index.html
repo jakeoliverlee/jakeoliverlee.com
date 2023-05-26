@@ -36,7 +36,7 @@
           </div>
         </div>
         <div class="w-full sm:w-1/4 text-center">
-          <a class="blog-header-logo text-gray-900 dark:text-white text-dark" href="#">Jake Lee</a>
+          <a class="blog-header-logo text-gray-900 dark:text-white text-dark select-none" href="#">Jake Lee</a>
         </div>
         <div class="w-full sm:w-1/4 flex justify-end items-center">
         <button id="theme-toggle" onclick="updateFavicon()" type="button" class="mx-4 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 transition duration-200">
@@ -78,8 +78,8 @@
           <div class="flex-1 mx-auto text-center md:text-left">
             <h1 class="text-gray-900 dark:text-white text-3xl md:text-4xl font-bold pointer-events-none">About me</h1>
             <p class="mt-6 text-base text-zinc-600 dark:text-zinc-400 max-w-4xl sm:mb-4 sm:mx-auto mx-auto">
-              Welcome to my personal website! On this site, you will learn a little about my professional life, including what I do for work,
-              some of the things I have built in my spare time, and some of my interests. I enjoy cycling when I'm out of the house and am also
+              Welcome! On this site, you will learn a little about my professional life, including what I do for work,
+              some of the things I have built in my spare time, and some of my interests. I enjoy cycling when I'm out of the house and I'm also
               a rugby fan. I'm always looking for something new to build, so if you have any ideas; <a href="#contact" class="underline">feel free to reach out to me.</a>
             </p>
           </div>
@@ -358,9 +358,10 @@
         <div class="flex w-full flex-items-center justify-center min-h-3">
           <img class="w-8 h-8 mr-5 inline-block mb-4" src="assets/svgs/icons8-python.svg" alt="Python">
           <img class="w-8 h-8 mr-5 inline-block mb-4" src="assets/svgs/flask-svgrepo-com.svg" alt="Flask">
-          <img class="w-8 h-8 inline-block mr-2 mb-4" src="assets/svgs/gcp.svg" alt="GCP">
+          <img class="w-8 h-8 mr-5 inline-block mb-4" src="assets/svgs/gcp.svg" alt="GCP">
+          <img class="w-8 h-8 inline-block mb-4" src="assets/svgs/docker-svgrepo-com.svg" alt="Docker">
         </div>
-        <a href="https://github.com/jakeoliverlee/githubgraphs" target="_blank" class="text-white animate-pulse hover:animate-none bg-gradient-to-r
+        <a href="#githubgraphs" class="text-white animate-pulse hover:animate-none bg-gradient-to-r
         from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300
          dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mt-6">
           Read more
@@ -371,15 +372,111 @@
   </div>
 </section>
 
+<article id="githubgraphs" class="select-none mt-4 mx-4 md:gap-8 md:grid md:grid-cols-3">
+  <div>
+      <div class="mx-auto flex items-center mb-6 space-x-4">
+          <img class="w-10 h-10 mr-2" src="assets/images/icons8-graph-100.png" alt="">
+          <div class="space-y-1 font-medium text-gray-900 dark:text-white">
+              <a href="https://github.com/jakeoliverlee/githubgraphs" target="_blank" class="hover:underline">Github Graph's</a>
+          </div>
+      </div>
+      <ul class="space-y-4 text-sm text-gray-500 dark:text-gray-400">
+        <li>REST API for generating graph SVGs related to GitHub data, built using Flask.</li>
+          <li class="flex items-center">
+              <span
+                class="bg-gray-100 text-gray-900 text-xs font-medium inline-flex shadow-md items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
+                Released: 20/05/2023
+              </span>
+            </li>
+          <li class="flex items-center">
+            <a href="https://github.com/jakeoliverlee/githubgraphs" class="text-gray-500 hover:text-gray-900 dark:hover:text-white" target="_blank">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477
+                 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483
+                  0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608
+                  1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951
+                   0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115
+                    2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566
+                     4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" /></svg>
+              <span class="sr-only">GitHub account</span>
+          </a>
+            <span
+          class="ml-2 bg-gray-100 text-gray-900 text-xs shadow-md font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
+          v1.1.3
+        </span>
+          </li>
+          <li class="flex items-center" id="tech-logos">
+            <img data-animate data-delay="0s" class="w-10 h-10 mr-5 inline-block p-1 rounded-full opacity-0" src="assets/svgs/icons8-python.svg" alt="Python">
+            <img data-animate data-delay="0.2s" class="w-8 h-8 mr-5 inline-block rounded-full opacity-0" src="assets/svgs/flask-svgrepo-com.svg" alt="Flask">
+            <img data-animate data-delay="0.4s" class="w-8 h-8 mr-5 inline-block rounded-full opacity-0" src="assets/svgs/gcp.svg" alt="GCP">
+            <img data-animate data-delay="0.4s" class="w-8 h-8 mr-5 inline-block rounded-full opacity-0" src="assets/svgs/docker-svgrepo-com.svg" alt="Docker">
+          </li>
+      </ul>
+  </div>
+  <div class="col-span-2 mt-6 my-8 md:mt-0">
+      <div class="flex items-start mb-5">
+          <div class="pr-4">
+              <h4 class="text-xl font-bold text-gray-900 dark:text-white">What problem did this solve?</h4>
+          </div>
+      </div>
+      <ul class="list-disc ml-6 mb-8 text-gray-500 dark:text-gray-400">
+        <li class="mb-2">I wanted a way to visualise how active I was on a project, in such a way that it was dynamic and could also be displayed on my other projects - like the webpage you are reading from now.
+        </li>
+      </ul>
+      <div class="mt-5 flex items-start mb-5">
+        <div class="pr-4">
+            <h4 class="text-xl font-bold text-gray-900 dark:text-white">A live example:</h4>
+        </div>
+    </div>
+    <ul class="list-disc ml-6 mb-8 text-gray-500 dark:text-gray-400">
+
+      <img src="https://jakeoliverlee-githubgraphs.nw.r.appspot.com/v1/commit-graph?username=jakeoliverlee&repo=jakeoliverlee.com&theme=dark" class="toggleIconDark hidden hover:scale-115 transform ease-in-out duration-300 rounded-md">
+      <img src="https://jakeoliverlee-githubgraphs.nw.r.appspot.com/v1/commit-graph?username=jakeoliverlee&repo=jakeoliverlee.com&theme=rainbow" class="toggleIconLight hidden hover:scale-115 transform ease-in-out duration-300 rounded-md">
+    </ul>
+      <div class="mt-5 flex items-start mb-5">
+        <div class="pr-4">
+            <h4 class="text-xl font-bold text-gray-900 dark:text-white">Who are my user base?</h4>
+        </div>
+    </div>
+    <ul class="list-disc ml-6 mb-8 text-gray-500 dark:text-gray-400">
+      <li>Any customer of GitHub; mainly other developers.</li>
+    </ul>
+    <div class="flex items-start mb-5">
+      <div class="pr-4">
+          <h4 class="text-xl font-bold text-gray-900 dark:text-white">What are some of the technical decisions I made?</h4>
+      </div>
+    </div>
+    <ul class="list-disc ml-6 mb-8 text-gray-500 dark:text-gray-400">
+      <li class="mb-2">
+        I decided to <a class="font-bold">structure my API based on the Flask framework</a>, which I find to be more flexible over frameworks like Django. <a class="font-bold">On top of Flask I am using Connexion</a>, a framework which allows specification-first API development.
+        Connexion <a class="font-bold">allows my API to be defined by a yaml file</a>, which is arguably <a class="font-bold">more readable,</a> but also allows me to make use of Swagger UI - an interactive api documentation tool. Check out this API on Swagger <a class="underline" href="https://jakeoliverlee-githubgraphs.nw.r.appspot.com/v1/ui/#/commit%20graph/controller.get_commit_graph">here.</a>
+      </li>
+      <li class="mb-2">I am utilizing Github's API to grab information about: the user, the repository and commit history. I noticed that making API calls to GitHub's servers were significantly impacting the runtime of my API, which is why I <a class="font-bold">developed a caching 
+        system</a> using Google's Cloud storage, this <a class="font-bold">improved the efficiency of the program</a> by minimizing the amount of API calls needed per run.
+      </li>
+    </ul>
+      <div class="flex items-start mb-5">
+        <div class="pr-4">
+            <h4 class="text-xl font-bold text-gray-900 dark:text-white">What was the outcome and what did I learn?</h4>
+        </div>
+    </div>
+    <ul class="list-disc ml-6 mb-4 text-gray-500 dark:text-gray-400">
+      <li class="mb-2">This project taught me the importance of efficient code, and how runtime can impact the user experience.</li>
+      <li class="mb-2">I learnt how to profile a REST API using libaries such as Werkzeug's Profilder Middleware, as well as Google's Profiler tool which I used to help me identify where the bottlenecks were in my API.</li>
+      <li class="mb-2">I learnt how to create clear and concise API documentation, including how to create interactive documentation using Swagger's UI. </li>
+    </ul>
+  </div>
+</article>
+
 <article id="resume_section" class="select-none mt-4 mx-4 md:gap-8 md:grid md:grid-cols-3">
   <div>
       <div class="mx-auto flex items-center mb-6 space-x-4">
           <img class="w-10 h-10 mr-2" src="assets/svgs/portfolio-svgrepo-com.svg" alt="">
           <div class="space-y-1 font-medium text-gray-900 dark:text-white">
-              <p>Resume Website</p>
+              <a href="https://github.com/jakeoliverlee/jakeoliverlee.com" target="_blank" class="hover:underline">Resume Website</a>
           </div>
       </div>
       <ul class="space-y-4 text-sm text-gray-500 dark:text-gray-400">
+        <li>My personal portfolio website</li>
           <li class="flex items-center">
               <span
                 class="bg-gray-100 text-gray-900 text-xs font-medium inline-flex shadow-md items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
@@ -438,11 +535,11 @@
     </div>
     <ul class="list-disc ml-6 mb-8 text-gray-500 dark:text-gray-400">
       <li class="mb-2">The frontend for this project was written almost entirely in HTML and <a href="https://tailwindui.com/" class="underline text-blue-400">Tailwind CSS</a>,
-        with a small amount of Javascript. I needed this project to be fully mobile-responsive as well as supporting Dark Mode/Light Mode - TailwindCSS made this very simple to achieve.</li>
-      <li class="mb-2">The backend is written in NodeJS, based on the ExpressJS framework, which I used in my developer environment to spin up a locally hosted server.</li>
+        with a small amount of Javascript. I needed this project to be <a class="font-bold">fully mobile-responsive</a> as well as <supporting class="font-bold">supporting Dark Mode/Light Mode</a> - TailwindCSS made this very simple to achieve.</li>
+      <li class="mb-2">The <a class="font-bold">backend is written in NodeJS, based on the ExpressJS framework,</a> which I used in my developer environment to spin up a locally hosted server.</li>
       <li class="mb-2">Knowing that a single-page app (SPA) like this one didn't require a complex infrastructure, I opted for Google's PaaS service, Firebase.
-        Firebase offers me a comprehensive set of tools, such as Google Analytics, to monitor my site's information and GCP Functions for the backend of the <a href="#work_experience" class="underline">'Download CV'</a>  button.</li>
-      <li>For CI/CD, I utilized Github Actions, which executes tests on my code using <a href="https://www.cypress.io/" class="underline text-blue-400">Cypress</a>
+        Firebase offers me a comprehensive set of tools, such as Google Analytics, to monitor my site's information and Google's Cloud Functions (similar to Lambda on AWS) for the backend of the <a href="#work_experience" class="underline">'Download CV'</a>  button.</li>
+      <li><a class="font-bold">For CI/CD, I utilized Github Actions,</a> which executes tests on my code using <a href="https://www.cypress.io/" class="underline text-blue-400">Cypress</a>
         end-to-end testing framework, installs necessary dependencies, and deploys my application to Firebase.</li>
     </ul>
       <div class="flex items-start mb-5">
@@ -459,6 +556,7 @@
   </div>
 </article>
 
+
 <article class="select-none mx-4 mt-6 md:gap-8 md:grid md:grid-cols-3">
   <div id="streamline">
       <div class="mx-auto flex items-center mb-6 space-x-4">
@@ -468,6 +566,7 @@
           </div>
       </div>
       <ul class="space-y-4 text-md text-gray-500 dark:text-gray-400">
+        <a>An Amazon-internal web application built entirely in Python.</a>
         <li class="flex items-center">
           <span
             class="bg-gray-100 text-gray-900 text-xs font-medium inline-flex shadow-md items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
@@ -536,7 +635,7 @@
     <li class="mb-2">
       Streamline is a web application developed entirely in Python; based on the
        <a href="https://streamlit.io/" class="underline text-blue-400">Streamlit</a> web framework. Streamlit
-      abstracts a lot of the complexities of the backend which enabled us to focus on writing
+      abstracts a lot of the backend components for me which enabled me to focus on writing
       the Python code that powers Streamline.
       Under the hood, streamlit uses WebSockets to enable real-time updates and low latency,
       Streamlit can also manage widget states on the frontend and syncs the states

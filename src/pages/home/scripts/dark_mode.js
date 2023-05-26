@@ -5,6 +5,7 @@ const toggleIconsDark = document.querySelectorAll(".toggleIconDark");
 const toggleIconsLight = document.querySelectorAll(".toggleIconLight");
 const body = document.querySelector("html");
 
+
 // Change the icons inside the button based on previous settings
 if (
   localStorage.getItem("color-theme") === "dark" ||

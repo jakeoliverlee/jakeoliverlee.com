@@ -3515,6 +3515,10 @@ h6 {
   transform: scale(1.05);
 }
 
+.hover\:scale-115:hover {
+  transform: scale(1.15);
+}
+
 .transform {
   transform: translate3d(0, 0, 0);
 }
